@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador Codigo QR Version 4 — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Generador Codigo QR Version 4</h2>
+            <img src="..//imagenes/generadorV4.png" alt="Generador Codigo QR Version 4" class="articulo-imagen">
+            <p class="credito">Imagen tomada como evidencia del programa realizado</p>
+            <div class="fecha">2026-08-06</div>
+            <div class="categorias">#python</div>
+            
+            <h3>De un QR bonito a una herramienta real (Versión 4)</h3>
+<p>Mi código QR ya era un éxito… o al menos, para el nivel estético que estaba buscando.</p>
+<p>Tenía los colores de mi marca, el logotipo en el centro y una apariencia mucho más profesional que la primera versión.</p>
+<p>Todo parecía perfecto.</p>
+<p>Hasta que me di cuenta de un problema importante.</p>
+<p>El código solo funcionaba para una red social, porque apuntaba a un único enlace.</p>
+<p>Y en el mundo real, eso no era suficiente para mi negocio.</p>
+<p>Necesitaba que las personas pudieran elegir entre varios destinos: Instagram, WhatsApp, mi portafolio, el menú de servicios y otros enlaces importantes.</p>
+<p>Fue entonces cuando entendí que el problema ya no era el diseño del QR.</p>
+<p>El problema era la estrategia.</p>
+<h3>Cambiando la estrategia</h3>
+<p>En lugar de seguir apuntando el QR a un enlace estático externo, decidí construir una página web propia utilizando Flask y desplegarla gratuitamente en la nube mediante Render.</p>
+<p>Nunca había utilizado Render antes y, siendo honesta, fue una de las partes más divertidas del proyecto.</p>
+<p>Descubrir que podía publicar mi propio sitio web sin costo y conectarlo directamente con GitHub me hizo sentir que el proyecto estaba dando un paso mucho más serio.</p>
+<h3>La arquitectura del proyecto</h3>
+<p>Desarrollé una pequeña aplicación web utilizando Python, HTML y CSS.</p>
+<p>Personalicé la interfaz con los colores de mi marca y organicé el proyecto alrededor de un archivo principal llamado `app.py`, que contiene la aplicación Flask.</p>
+<p>La idea era sencilla:</p>
+<li>crear una página con todos mis enlaces importantes,</li>
+<li>publicar esa página en internet,</li>
+<li>y hacer que el código QR apuntara a esa dirección pública.</li>
+<p>De esa forma, un solo QR podría llevar a múltiples destinos.</p>
+<h3>Preparando la aplicación para producción</h3>
+<p>Para que la aplicación pudiera ejecutarse correctamente en la nube, preparé el proyecto utilizando un servidor WSGI llamado Gunicorn y definí todas las dependencias en un archivo `requirements.txt`.</p>
+<p>Después subí el proyecto completo a GitHub y lo conecté con Render.</p>
+<p>En Render configuré un servicio web con los siguientes parámetros:</p>
+<li>Runtime: `Python 3`</li>
+<li>Build Command: `pip install -r requirements.txt`</li>
+<li>Start Command: `gunicorn app:app`</li>
+<h3>El resultado final</h3>
+<p>Una vez desplegada la aplicación, obtuve una dirección pública similar a:</p>
+<p>`https://mi-linktree.onrender.com`</p>
+<p>Entonces generé una nueva versión del código QR, esta vez en alta resolución y con el logotipo central, apuntando a mi propia página web.</p>
+<p>Y creo que ahí fue cuando el proyecto dejó de sentirse como un ejercicio de Python.</p>
+<p>Ya no era solo un código QR bonito.</p>
+<p>Era una herramienta real, conectada a internet, alojada en la nube y lista para imprimirse en tarjetas de presentación o folletos.</p>
+<h3>Lo que más me gustó de esta versión</h3>
+<p>La versión 1 me enseñó a generar un QR.</p>
+<p>La versión 2 me enseñó a personalizarlo.</p>
+<p>La versión 3 me enseñó a integrar identidad de marca.</p>
+<p>Y la versión 4 me enseñó algo mucho más grande:</p>
+<p>cómo conectar Python, HTML, CSS, GitHub y un servicio de despliegue para construir una solución completa.</p>
+<p>Y honestamente, esa sensación de ver una idea propia funcionando en internet no tiene precio.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

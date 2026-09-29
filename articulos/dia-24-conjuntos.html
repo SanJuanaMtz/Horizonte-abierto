@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 24 Conjuntos — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Día 24 Conjuntos</h2>
+            <img src="..//imagenes/conjuntos.jpg" alt="Día 24 Conjuntos" class="articulo-imagen">
+            <p class="credito"><a href="https://unsplash.com/es/@mocaandrew" target="_blank" rel="noopener">Imagen tomada de Unsplash / Andrew Moca</a></p>
+            <div class="fecha">2026-08-11</div>
+            <div class="categorias">#python</div>
+            
+            <p>En programación, muchas veces necesitamos organizar información.</p>
+<p>Pero no siempre queremos guardar todo tal como llega.</p>
+<p>A veces necesitamos quedarnos únicamente con elementos únicos, sin repeticiones.</p>
+<p>Ahí es donde entran los conjuntos.</p>
+<hr>
+<p>Un conjunto es una estructura de datos que permite almacenar colecciones de elementos únicos, como los diccionarios.</p>
+<p>A diferencia de las listas o las tuplas, los conjuntos no mantienen un orden específico.</p>
+<p>Y a diferencia de las tuplas, sí pueden modificarse.</p>
+<hr>
+<p>En Python podemos crearlos utilizando llaves `{}` o la función `set()`.</p>
+<p>Por ejemplo:</p>
+<pre><code>
+frutas = {"manzana", "banana", "naranja"}
+numeros = set([1, 2, 3, 4, 5])
+</code></pre>
+<hr>
+<p>Algo interesante de los conjuntos es que permiten realizar operaciones matemáticas.</p>
+<p>Por ejemplo:</p>
+<li>**Unión (`|`)** → combina elementos</li>
+<li>**Intersección (`&`)** → muestra elementos compartidos</li>
+<li>**Diferencia ()** → muestra lo que está en un conjunto y no en otro</li>
+<li>**Diferencia simétrica (`^`)** → muestra elementos que no comparten</li>
+<hr>
+<p>También cuentan con métodos útiles como:</p>
+<li>`add()` → agregar elementos</li>
+<li>`remove()` → eliminar elementos</li>
+<li>`discard()` → eliminar sin error si no existe</li>
+<li>`clear()` → vaciar el conjunto</li>
+<hr>
+<p>Creo que los conjuntos muestran algo interesante sobre Python.</p>
+<p>Cada estructura de datos está diseñada para resolver una necesidad distinta.</p>
+<p>Las listas mantienen orden.</p>
+<p>Las tuplas priorizan estabilidad.</p>
+<p>Y los conjuntos buscan unicidad.</p>
+<hr>
+<p>Después de recorrer tantas estructuras, empiezo a notar algo:</p>
+<p>Programar no solo consiste en guardar datos, también es elegir la mejor forma de organizarlos.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

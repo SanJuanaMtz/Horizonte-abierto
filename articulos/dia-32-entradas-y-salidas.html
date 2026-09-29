@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 32 Entradas y Salidas — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Día 32 Entradas y Salidas</h2>
+            <img src="..//imagenes/entra-sal.jpg" alt="Día 32 Entradas y Salidas" class="articulo-imagen">
+            <p class="credito"><a href="https://unsplash.com/es/@wocintechchat" target="_blank" rel="noopener">Imagen tomada de Unsplash / Christina @ wocintechchat.com M</a></p>
+            <div class="fecha">2026-06-16</div>
+            <div class="categorias">#python</div>
+            
+            <p>Actualmente interactuamos con la tecnología de formas que hace algunos años parecían imposibles.</p>
+<p>Hablamos con asistentes virtuales, realizamos búsquedas en segundos y utilizamos herramientas de inteligencia artificial para obtener información casi de manera instantánea.</p>
+<p>Pero detrás de todas estas tecnologías existe algo mucho más básico: la comunicación.</p>
+<p>Para que un programa pueda ayudarnos, primero necesita recibir información. Y una vez que la procesa, necesita devolvernos una respuesta.</p>
+<p>En Python, esta interacción se realiza mediante la entrada y salida de datos.</p>
+<p>Para obtener información del usuario durante la ejecución de un programa, podemos utilizar la función `input()`. Esta función muestra un mensaje en pantalla y espera a que el usuario ingrese un valor.</p>
+<pre><code>
+nombre = input("Ingresa tu nombre: ")
+edad = input("Ingresa tu edad: ")
+
+print("Hola, " + nombre + "!")
+print("Tienes " + edad + " años.")
+</code></pre>
+<p>La función `input()` siempre devuelve una cadena de texto. Si necesitamos trabajar con números, debemos convertir esos datos utilizando funciones como `int()` o `float()`.</p>
+<p>Por ejemplo:</p>
+<pre><code>
+edad = int(input("Ingresa tu edad: "))
+</code></pre>
+<p>Por otro lado, para mostrar información utilizamos la función `print()`, que permite enviar mensajes a la consola.</p>
+<p>Una forma muy cómoda de mostrar información es mediante las *f-strings*, que permiten insertar variables directamente dentro de una cadena de texto.</p>
+<pre><code>
+nombre = "Juan"
+edad = 25
+
+print(f"Hola, mi nombre es{nombre} y tengo{edad} años.")
+</code></pre>
+<p>Aunque hoy estamos acostumbrados a conversar con aplicaciones, asistentes virtuales e inteligencias artificiales, toda interacción entre una persona y un programa sigue basándose en la misma idea:</p>
+<p>Primero proporcionamos información.</p>
+<p>Después recibimos una respuesta.</p>
+<p>Y aunque algunas respuestas lleguen en milisegundos y otras requieran más tiempo, toda comunicación comienza exactamente igual: con una pregunta y una respuesta esperando ser compartida.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

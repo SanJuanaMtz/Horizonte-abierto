@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 43 SQL Injection — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Día 43 SQL Injection</h2>
+            <img src="..//imagenes/sql-injection.jpg" alt="Día 43 SQL Injection" class="articulo-imagen">
+            <p class="credito"><a href="https://unsplash.com/es/@markusspiske" target="_blank" rel="noopener">Imagen tomada de Unsplash / Markus Spiske</a></p>
+            <div class="fecha">2026-08-27</div>
+            <div class="categorias">#sql</div>
+            
+            <p>Las bases de datos son herramientas fundamentales en la vida real.</p>
+<p>Gran parte de la información que almacenan pertenece a clientes, usuarios, empresas o proveedores de servicios, por lo que mantenerla segura es una de las responsabilidades más importantes de quienes desarrollan y administran estos sistemas.</p>
+<p>Pero la seguridad no solamente consiste en impedir que alguien acceda a una base de datos.</p>
+<p>También debemos asegurarnos de que las operaciones realizadas sobre ella sean consistentes y que la información no termine en un estado incorrecto.</p>
+<h3>Cuando varias operaciones ocurren al mismo tiempo</h3>
+<p>Cuando dos o más personas, procesos o aplicaciones trabajan sobre la misma base de datos, pueden surgir problemas de concurrencia.</p>
+<p>Una operación podría modificar información mientras otra intenta utilizarla, generando resultados inesperados si no existe un mecanismo que controle estos cambios.</p>
+<p>Para esto existen las **transacciones**.</p>
+<p>En SQL podemos utilizar:</p>
+<li>`BEGIN TRANSACTION` para iniciar una transacción.</li>
+<li>`COMMIT` para guardar permanentemente los cambios cuando todo ha salido correctamente.</li>
+<li>`ROLLBACK` para revertir los cambios realizados dentro de la transacción si ocurre algún problema.</li>
+<p>Podríamos imaginarlo como una especie de borrador.</p>
+<p>Realizamos varias modificaciones, comprobamos que todo esté correcto y, solamente entonces, confirmamos los cambios.</p>
+<p>Si algo falla, podemos volver al estado anterior.</p>
+<p>Pero los problemas de seguridad no terminan aquí.</p>
+<hr>
+<h2>SQL Injection</h2>
+<p>Uno de los riesgos más conocidos al trabajar con bases de datos es la **inyección SQL**.</p>
+<p>Este tipo de vulnerabilidad aparece cuando una aplicación incorpora información proporcionada por un usuario dentro de una consulta SQL de manera insegura.</p>
+<p>El problema ocurre cuando la aplicación permite que esa información sea interpretada como parte del código SQL en lugar de tratarla únicamente como un dato.</p>
+<p>Por ejemplo, una consulta construida directamente con información del usuario podría terminar siendo manipulada para modificar su comportamiento.</p>
+<p>Por eso debemos evitar construir consultas concatenando directamente los valores recibidos.</p>
+<p>Una alternativa mucho más segura es utilizar **consultas parametrizadas**.</p>
+<p>Por ejemplo:</p>
+<pre><code>
+rows=db.execute("SELECT COUNT(*) FROM users WHERE username = ? AND password = ?",username,password
+)
+</code></pre>
+<p>Aquí los `?` funcionan como marcadores de posición.</p>
+<p>Los valores de `username` y `password` se proporcionan como parámetros separados de la consulta, evitando que el contenido introducido por el usuario sea interpretado directamente como código SQL.</p>
+<p>Esto es muy diferente a construir algo como:</p>
+<pre><code>
+query="SELECT * FROM users WHERE username = '"+username+"'"
+</code></pre>
+<p>En este último caso estamos incorporando directamente la entrada del usuario dentro de la consulta, lo que puede abrir una puerta a ataques de inyección.</p>
+<h3>La seguridad también está en los pequeños detalles</h3>
+<p>Utilizar consultas parametrizadas es solamente una parte de una estrategia de seguridad.</p>
+<p>También debemos considerar:</p>
+<li>validar correctamente la información recibida;</li>
+<li>utilizar el principio de **mínimo privilegio** para los permisos de la aplicación;</li>
+<li>proteger las credenciales;</li>
+<li>evitar exponer información innecesaria;</li>
+<li>manejar correctamente los errores;</li>
+<li>mantener actualizadas las herramientas y dependencias.</li>
+<p>Una base de datos puede contener información extremadamente valiosa, pero su seguridad no comienza cuando alguien intenta atacarla.</p>
+<p>Comienza mucho antes.</p>
+<p>Comienza cuando escribimos la primera línea de código que interactuará con ella.</p>
+<p>Y esto me recuerda algo que he aprendido mientras avanzo en programación: **una buena práctica no solamente hace que nuestro código funcione; también ayuda a evitar que ese mismo código se convierta en una vulnerabilidad.**</p>
+<p>Porque cuando trabajamos con datos reales, un pequeño error puede dejar de ser solamente un error.</p>
+<p>Puede convertirse en un problema para alguien más.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 20 Organizador de Archivos — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Día 20 Organizador de Archivos</h2>
+            <img src="..//imagenes/organizadorV1.png" alt="Día 20 Organizador de Archivos" class="articulo-imagen">
+            <p class="credito">Imagen tomada como evidencia del programa realizado</p>
+            <div class="fecha">2026-05-04</div>
+            <div class="categorias">#python</div>
+            
+            <h2>Organizador automático de archivos con Python</h2>
+<p>Hoy construí un pequeño proyecto en Python: un organizador automático de archivos.</p>
+<p>La idea surgió de un problema cotidiano: las carpetas como “Descargas” suelen llenarse de archivos mezclados, lo que hace difícil encontrar información rápidamente. Entonces pensé en una solución simple: automatizar la organización de archivos usando código.</p>
+<hr>
+<p>#### ¿Qué hace el proyecto?</p>
+<p>El programa recorre una carpeta y organiza automáticamente los archivos según su tipo, por ejemplo:</p>
+<li>Documentos → `.pdf`, `.docx`</li>
+<li>Imágenes → `.jpg`, `.png`</li>
+<p>Cada archivo es movido a su carpeta correspondiente sin intervención manual.</p>
+<hr>
+<p>#### ¿Cómo funciona?</p>
+<p>Para construirlo, utilicé Python y algunos conceptos básicos que he estado aprendiendo en CS50:</p>
+<p>#### 1. Recorrer archivos con un loop</p>
+<p>Uso un ciclo `for` para iterar sobre todos los archivos dentro de una carpeta.</p>
+<p>Esto permite que el programa “vea” cada archivo uno por uno.</p>
+<hr>
+<p>#### 2. Identificar el tipo de archivo con condicionales</p>
+<p>Utilizo estructuras `if` para verificar la extensión del archivo.</p>
+<p>Por ejemplo:</p>
+<li>Si termina en `.pdf`, es un documento</li>
+<li>Si termina en `.jpg`, es una imagen</li>
+<hr>
+<p>#### 3. Mover archivos con módulos del sistema</p>
+<p>Uso los módulos `os` y `shutil` para interactuar con el sistema de archivos:</p>
+<li>`os` → para leer archivos en una carpeta</li>
+<li>`shutil` → para mover archivos de un lugar a otro</li>
+<hr>
+<h3>Lo más importante que aprendí</h3>
+<p>Más allá del código, este proyecto me ayudó a entender algo clave:</p>
+<p>Los conceptos básicos de programación no son solo teoría, sino herramientas reales que pueden automatizar tareas del día a día.</p>
+<p>Algo tan simple como un loop y una condición puede ahorrar tiempo y esfuerzo en tareas repetitivas.</p>
+<hr>
+<h3>Conclusión</h3>
+<p>Este proyecto no es complejo, pero representa un paso importante en mi proceso de aprendizaje.</p>
+<p>Me permitió conectar lo que estoy aprendiendo en CS50 con algo práctico y funcional.</p>
+<p>Siguiente paso: mejorar este script y hacerlo más dinámico.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

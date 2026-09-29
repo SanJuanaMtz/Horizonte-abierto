@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 39 Funciones en SQL — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Día 39 Funciones en SQL</h2>
+            <img src="..//imagenes/libros.jpg" alt="Día 39 Funciones en SQL" class="articulo-imagen">
+            <p class="credito"><a href="https://unsplash.com/es/@gulfergin_01" target="_blank" rel="noopener">Imagen tomada de Unsplash / Gülfer ERGİN</a></p>
+            <div class="fecha">2026-08-14</div>
+            <div class="categorias">#sql</div>
+            
+            <h3>Cuando buscar ya no es suficiente: funciones en SQL</h3>
+<p>Conocer las herramientas que nos proporciona SQL para realizar consultas nos ayuda a mejorar nuestras búsquedas.</p>
+<p>Comandos como `WHERE`, `LIKE`, `ORDER BY` o `LIMIT` nos permiten filtrar, ordenar y controlar la información que obtenemos.</p>
+<p>Sin embargo, cuando trabajamos con bases de datos reales, buscar no siempre es suficiente.</p>
+<p>Imaginemos una biblioteca enorme. Encontrar un libro es útil, pero a veces queremos responder preguntas más específicas:</p>
+<li>¿Cuántos libros hay de un género?</li>
+<li>¿Cuál es el más reciente?</li>
+<li>¿Cuál es el más antiguo?</li>
+<li>¿Cuántos autores diferentes existen?</li>
+<li>¿Cuál es el promedio de páginas por libro?</li>
+<p>Ahí es donde entran las funciones de SQL.</p>
+<p>Estas funciones nos permiten analizar la información y obtener resultados mucho más detallados sin tener que revisar registro por registro.</p>
+<h3>Algunas funciones muy utilizadas</h3>
+<p>SQL incluye muchas funciones, pero estas son algunas de las más comunes:</p>
+<p>`AVG` → calcula un promedio.</p>
+<p>`COUNT` → cuenta registros.</p>
+<p>`DISTINCT` → elimina duplicados.</p>
+<p>`LOWER` → convierte texto a minúsculas.</p>
+<p>`UPPER` → convierte texto a mayúsculas.</p>
+<p>`MAX` → obtiene el valor más alto.</p>
+<p>`MIN` → obtiene el valor más bajo.</p>
+<h3>Contar registros</h3>
+<p>Por ejemplo, si tenemos una tabla llamada `favorites` y queremos saber cuántas personas eligieron el lenguaje C, podemos escribir:</p>
+<p>`SELECT COUNT(*) FROM favorites WHERE language = 'C';`</p>
+<p>Aquí `COUNT(*)` cuenta todas las filas que cumplen la condición establecida por `WHERE`.</p>
+<h3>Encontrar valores máximos y mínimos</h3>
+<p>También podríamos querer saber cuál es la edad más alta registrada en una tabla de usuarios:</p>
+<p>`SELECT MAX(age) FROM users;`</p>
+<p>O la más baja:</p>
+<p>`SELECT MIN(age) FROM users;`</p>
+<h3>Calcular un promedio</h3>
+<p>Si deseamos conocer el promedio de edad de los usuarios:</p>
+<p>`SELECT AVG(age) FROM users;`</p>
+<p>Esto es especialmente útil cuando trabajamos con estadísticas o análisis de datos.</p>
+<h3>Evitar duplicados</h3>
+<p>A veces una tabla contiene valores repetidos. Si queremos ver únicamente los lenguajes diferentes registrados, usamos:</p>
+<p>`SELECT DISTINCT language FROM favorites;`</p>
+<p>Ahora cada lenguaje aparecerá una sola vez.</p>
+<h3>Trabajar con texto</h3>
+<p>Las funciones `LOWER` y `UPPER` nos ayudan a normalizar texto.</p>
+<p>Por ejemplo:</p>
+<p>`SELECT UPPER(name) FROM users;`</p>
+<p>Mostrará todos los nombres en mayúsculas.</p>
+<p>Y:</p>
+<p>`SELECT LOWER(name) FROM users;`</p>
+<p>Los mostrará en minúsculas.</p>
+<h3>Lo interesante empieza al combinarlas</h3>
+<p>Estas funciones son poderosas por separado, pero se vuelven mucho más útiles cuando las combinamos con otras herramientas de SQL.</p>
+<p>Por ejemplo:</p>
+<p>`SELECT COUNT(*) FROM users WHERE city = 'Monterrey';`</p>
+<p>Aquí estamos usando una función (`COUNT`) junto con un filtro (`WHERE`) para responder una pregunta muy específica.</p>
+<h3>Más que buscar, entender los datos</h3>
+<p>Hasta ahora he sentido que SQL tiene dos niveles.</p>
+<p>El primero es encontrar información.</p>
+<p>El segundo es entender la información.</p>
+<p>Las funciones nos ayudan a pasar de “muéstrame los datos” a “dime qué significan esos datos”.</p>
+<p>Aquí las bases de datos dejan de ser una colección de registros para convertirse en una herramienta para descubrir patrones, cantidades y relaciones dentro de la información. Es decir, en este punto comenzamos a interpretar la colección.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

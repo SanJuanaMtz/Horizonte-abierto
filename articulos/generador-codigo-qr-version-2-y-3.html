@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador Codigo QR Version 2 y 3 — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Generador Codigo QR Version 2 y 3</h2>
+            <img src="..//imagenes/generador-V23.png" alt="Generador Codigo QR Version 2 y 3" class="articulo-imagen">
+            <p class="credito">Imagen tomada como evidencia del programa realizado</p>
+            <div class="fecha">2026-07-31</div>
+            <div class="categorias">#python</div>
+            
+            <h2>Personalizando mi generador de códigos QR (Versiones 2 y 3)</h2>
+<p>Después de generar la primera versión de mi código QR, me di cuenta de que cumplía perfectamente su función.</p>
+<p>Escanearlo llevaba exactamente al lugar que yo quería.</p>
+<p>Sin embargo, había algo que no terminaba de convencerme.</p>
+<p>Se veía como cualquier otro código QR.</p>
+<p>Y si iba a formar parte de mi tarjeta como asesora de viajes, también debía representar la identidad de mi marca.</p>
+<p>Fue entonces cuando decidí crear una segunda versión enfocada no en la funcionalidad, sino en el diseño.</p>
+<h3>El primer cambio: los colores</h3>
+<p>Para comenzar con la personalización incorporé la librería **Pillow (PIL)** junto con `qrcode`.</p>
+<p>Esto me permitió tener un mayor control sobre la apariencia de la imagen generada.</p>
+<p>Lo primero que cambié fueron los colores.</p>
+<p>En lugar del clásico blanco y negro, utilicé los colores de mi marca para que el código QR mantuviera la misma identidad visual que el resto de mis materiales.</p>
+<p>Para ello pueden utilizarse colores en formato hexadecimal o mediante valores RGB, dependiendo de la forma en que queramos definirlos.</p>
+<h3>Mejorando la calidad de impresión</h3>
+<p>Otro aspecto que decidí ajustar fue el tamaño de la imagen.</p>
+<p>El parámetro `box_size` controla el tamaño de cada módulo del código QR.</p>
+<p>Aumentarlo permite generar imágenes con mayor resolución, algo especialmente útil cuando el código será impreso en tarjetas, folletos o cualquier otro material físico.</p>
+<p>También mantuve un margen utilizando `border`.</p>
+<p>Ese espacio en blanco alrededor del código no es únicamente estético; facilita que las cámaras puedan reconocerlo correctamente al escanearlo.</p>
+<h3>El detalle que hacía falta</h3>
+<p>Aunque los cambios anteriores mejoraban mucho el resultado, seguía sintiendo que faltaba algo.</p>
+<p>Quería que, con solo verlo, cualquiera pudiera identificar inmediatamente mi marca.</p>
+<p>La respuesta era bastante evidente:</p>
+<p>**Agregar mi logotipo en el centro del código QR.**</p>
+<p>Pero hacerlo no consistía únicamente en colocar una imagen encima.</p>
+<h3>La importancia de la corrección de errores</h3>
+<p>Los códigos QR incorporan un sistema de redundancia basado en el algoritmo **Reed-Solomon**, lo que les permite seguir funcionando incluso cuando parte de la imagen está dañada o cubierta.</p>
+<p>Para aprovechar esa característica configuré el nivel máximo de corrección de errores:</p>
+<pre><code>
+error_correction=qrcode.constants.ERROR_CORRECT_H
+</code></pre>
+<p>Este nivel permite recuperar la información incluso si aproximadamente un 30 % del código queda oculto.</p>
+<p>Gracias a ello es posible colocar un logotipo en el centro sin afectar el funcionamiento del QR, siempre que el diseño se mantenga dentro de un tamaño razonable.</p>
+<h3>Un pequeño consejo</h3>
+<p>Si decides personalizar un código QR con un logotipo, procura utilizar una imagen sencilla, con buen contraste y, si es posible, con un pequeño borde alrededor.</p>
+<p>Eso ayudará a mantener una buena legibilidad durante el escaneo.</p>
+<h3>Lo que aprendí</h3>
+<p>Este proyecto me hizo comprender que desarrollar una aplicación no termina cuando "funciona".</p>
+<p>Muchas veces la siguiente etapa consiste en pensar en la experiencia de quien la utilizará.</p>
+<p>En este caso, el código QR ya cumplía su función desde la primera versión.</p>
+<p>Las siguientes versiones no buscaban hacerlo más funcional, sino convertirlo en una herramienta que también representara mi identidad y la de mi marca.</p>
+<p>Y creo que esa diferencia también forma parte del proceso de aprender a desarrollar software.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 21 Listas — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Día 21 Listas</h2>
+            <img src="..//imagenes/listas.jpg" alt="Día 21 Listas" class="articulo-imagen">
+            <p class="credito"><a href="https://unsplash.com/es/@glenncarstenspeters" target="_blank" rel="noopener">Imagen tomada de Unsplash / Glenn Carstens-Peters</a></p>
+            <div class="fecha">2026-05-05</div>
+            <div class="categorias">#python</div>
+            
+            <p>Hace apenas una semana estábamos recorriendo este camino en C.</p>
+<p>Ahora, en Python, muchas cosas comienzan a sentirse familiares.</p>
+<p>Y eso es interesante, porque aunque cambie el lenguaje, varios conceptos siguen estando ahí.</p>
+<p>Solo cambian la forma en que se presentan.</p>
+<hr>
+<p>Un buen ejemplo son las listas.</p>
+<p>En C trabajábamos con matrices.</p>
+<p>En Python tenemos listas, que cumplen una función parecida: almacenar varios valores en una misma estructura.</p>
+<p>La diferencia está en que las listas son mucho más flexibles.</p>
+<p>Mientras que en C una matriz almacena elementos del mismo tipo, en Python una lista puede contener distintos tipos de datos.</p>
+<hr>
+<p>Por ejemplo:</p>
+<pre><code>
+frutas = ["manzana","banana","naranja"]
+
+print(frutas[0])
+print(frutas[1])
+print(frutas[2])
+</code></pre>
+<hr>
+<p>Algo que vuelve muy prácticas a las listas son sus métodos integrados.</p>
+<p>Estos nos permiten modificarlas fácilmente:</p>
+<li>`append()` → agrega un elemento al final</li>
+<li>`insert()` → inserta un elemento en una posición específica</li>
+<li>`remove()` → elimina un elemento</li>
+<li>`pop()` → elimina un elemento por posición</li>
+<li>`sort()` → ordena la lista</li>
+<li>`reverse()` → invierte su orden</li>
+<hr>
+<p>También existen las **listas por comprensión**.</p>
+<p>Estas permiten crear nuevas listas de forma más compacta.</p>
+<p>Su sintaxis puede verse así:</p>
+<pre><code>
+nueva_lista = [expresion for elemento in secuencia if condicion]
+</code></pre>
+<hr>
+<p>Al principio puede parecer una forma extraña de escribir código.</p>
+<p>Pero cuando empiezas a entenderla, te das cuenta de que simplifica bastante ciertas tareas.</p>
+<hr>
+<p>Creo que trabajar con listas deja algo muy claro:</p>
+<p>Python busca que resolver problemas sea más directo.</p>
+<p>Y después de venir de C, esa diferencia se siente bastante.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

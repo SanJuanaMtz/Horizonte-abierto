@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 30 Organizador Version 3.0 — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Día 30 Organizador Version 3.0</h2>
+            <img src="..//imagenes/organizadorV3.png" alt="Día 30 Organizador Version 3.0" class="articulo-imagen">
+            <p class="credito">Imagen tomada como evidencia del programa realizado</p>
+            <div class="fecha">2026-05-27</div>
+            <div class="categorias">#python #tecnologia</div>
+            
+            <h2>Construyendo un organizador de archivos con interfaz en Python: de una idea simple a una herramienta funcional</h2>
+<p>A veces una necesidad sencilla termina convirtiéndose en un proyecto mucho más completo de lo que imaginábamos.</p>
+<p>Todo comenzó con algo cotidiano: quería una forma más práctica de organizar archivos automáticamente sin tener que moverlos manualmente cada vez.</p>
+<p>La idea inicial era bastante simple:</p>
+<p>crear una herramienta que clasificara archivos según su tipo y que además fuera cómoda de usar.</p>
+<p>Con Python terminé desarrollando una versión funcional con interfaz gráfica, y durante el proceso aprendí bastante sobre automatización, estructura de código y cómo convertir una idea pequeña en una herramienta real.</p>
+<h2>El objetivo del proyecto</h2>
+<p>La meta era construir una herramienta que pudiera:</p>
+<li>seleccionar una carpeta desde una interfaz visual</li>
+<li>detectar automáticamente el tipo de archivo</li>
+<li>mover cada archivo a su carpeta correspondiente</li>
+<li>crear carpetas automáticamente si no existen</li>
+<li>mostrar un registro de movimientos dentro de la aplicación</li>
+<p>Quería evitar depender de la terminal y hacer que el flujo fuera visual y sencillo.</p>
+<h2>Tecnologías utilizadas</h2>
+<p>Para este proyecto utilicé:</p>
+<li>**Python 3**</li>
+<li>**Tkinter**</li>
+<li>**os**</li>
+<li>**shutil**</li>
+<h3>¿Por qué Tkinter?</h3>
+<p>Porque permite crear interfaces gráficas directamente con Python y fue ideal para este tipo de automatización.</p>
+<p>Además me ayudó a practicar una parte del lenguaje que no había explorado tanto: crear herramientas que puedan interactuar visualmente con el usuario.</p>
+<hr>
+<h2>Primera parte: definir categorías</h2>
+<p>Lo primero fue crear las reglas de organización.</p>
+<p>Definí un diccionario donde cada carpeta contiene las extensiones que debe recibir:</p>
+<pre><code>
+CARPETAS= {
+"Documents": [".pdf",".docx",".txt"],
+"Pictures": [".jpg",".jpeg",".png"],
+"Compressed": [".zip",".rar"]
+}
+</code></pre>
+<p>Esto hizo mucho más simple la clasificación.</p>
+<p>Por ejemplo:</p>
+<li>`.pdf` → Documents</li>
+<li>`.jpg` → Pictures</li>
+<li>`.zip` → Compressed</li>
+<p>Y además volvió mucho más fácil agregar nuevas categorías en el futuro.</p>
+<hr>
+<h2>Segunda parte: seleccionar una carpeta desde la interfaz</h2>
+<p>Después agregué el botón para abrir el explorador de archivos:</p>
+<pre><code>
+def seleccionar_carpeta():
+global carpeta_seleccionada
+carpeta_seleccionada = filedialog.askdirectory()
+</code></pre>
+<p>Esto evita escribir rutas manualmente y hace más cómoda la experiencia.</p>
+<p>También actualicé una etiqueta dentro de la ventana para mostrar qué carpeta fue seleccionada.</p>
+<p>Ese detalle me gustó bastante porque hace que el usuario siempre sepa sobre qué carpeta está trabajando.</p>
+<hr>
+<h2>Tercera parte: recorrer archivos automáticamente</h2>
+<p>Después llegó la lógica principal.</p>
+<p>La aplicación revisa todos los archivos de la carpeta:</p>
+<pre><code>
+for archivo in os.listdir(carpeta_seleccionada):
+</code></pre>
+<p>Luego valida que realmente sea un archivo:</p>
+<pre><code>
+if os.path.isfile(ruta_archivo):
+</code></pre>
+<p>Y obtiene su extensión:</p>
+<pre><code>
+extension = os.path.splitext(archivo)[1].lower()
+</code></pre>
+<p>Convertir a minúsculas ayudó bastante porque evita errores con extensiones como `.JPG` o `.PNG`.</p>
+<hr>
+<h2>Cuarta parte: mover archivos automáticamente</h2>
+<p>Cuando el programa encuentra coincidencia:</p>
+<li>crea la carpeta si no existe</li>
+<li>mueve el archivo</li>
+<li>registra el cambio</li>
+<pre><code>
+os.makedirs(destino, exist_ok=True)
+
+shutil.move(
+ruta_archivo,
+os.path.join(destino,archivo)
+)
+</code></pre>
+<p>Ejemplo práctico:</p>
+<p>Antes:</p>
+<pre><code>
+Downloads/
+report.pdf
+photo.jpg
+files.zip
+</code></pre>
+<p>Después:</p>
+<pre><code>
+Downloads/
+Documents/report.pdf
+Pictures/photo.jpg
+Compressed/files.zip
+</code></pre>
+<hr>
+<h2>Quinta parte: mostrar actividad dentro de la aplicación</h2>
+<p>Una de las mejoras que más me gustó fue agregar un pequeño registro visual.</p>
+<p>Cada archivo movido aparece en pantalla:</p>
+<pre><code>
+log_text.insert(
+tk.END,
+f"Moved:{archivo} →{carpeta_destino}\n"
+)
+</code></pre>
+<p>Esto ayuda a:</p>
+<li>verificar qué ocurrió</li>
+<li>revisar resultados</li>
+<li>detectar errores</li>
+<li>hacer más clara la interacción</li>
+<hr>
+<h2>Validaciones y mensajes</h2>
+<p>También añadí mensajes para mejorar la experiencia.</p>
+<p>Si no se selecciona carpeta:</p>
+<pre><code>
+messagebox.showwarning(...)
+</code></pre>
+<p>Y cuando termina:</p>
+<pre><code>
+messagebox.showinfo(...)
+</code></pre>
+<p>Son detalles pequeños, pero ayudan mucho a que la herramienta se sienta más completa.</p>
+<hr>
+<h2>Cómo fue evolucionando</h2>
+<p>Algo que me gustó de este proyecto fue ver cómo cada versión aportó algo diferente.</p>
+<h3>Versión 1</h3>
+<p>La idea base.</p>
+<p>Crear una automatización funcional.</p>
+<h3>Versión 2</h3>
+<p>Reorganizar el código.</p>
+<p>Hacerlo más limpio y más fácil de escalar.</p>
+<h3>Versión 3</h3>
+<p>Agregar interfaz visual.</p>
+<p>Mejorar el flujo de uso.</p>
+<p>Y convertirlo en una herramienta más práctica.</p>
+<p>La tercera versión fue el momento donde sentí que dejó de ser solo una prueba y empezó a parecer una herramienta real.</p>
+<hr>
+<h2>Lo que aprendí</h2>
+<p>Este proyecto me ayudó a practicar:</p>
+<li>estructuras de datos</li>
+<li>automatización con Python</li>
+<li>manipulación de archivos</li>
+<li>funciones</li>
+<li>validaciones</li>
+<li>Tkinter</li>
+<li>experiencia de usuario básica</li>
+<p>Pero también me recordó algo importante:</p>
+<p>a veces avanzar poco a poco funciona mejor que intentar construir todo de una sola vez.</p>
+<p>Cada mejora pequeña terminó enseñándome algo diferente.</p>
+<hr>
+<h2>Qué sigue</h2>
+<p>Ahora que ya existe una base estable, tengo varias ideas para seguir mejorándolo:</p>
+<li>guardar historial</li>
+<li>agregar filtros por más extensiones</li>
+<li>mejorar el diseño visual</li>
+<li>generar reportes</li>
+<li>permitir personalizar categorías</li>
+<p>Y eso es algo que me gusta mucho de programar:</p>
+<p>una idea puede empezar siendo pequeña y crecer conforme tú también vas aprendiendo.</p>
+<p>Este organizador comenzó como una necesidad práctica.</p>
+<p>Terminó siendo una herramienta funcional.</p>
+<p>Y en el proceso me ayudó a aprender bastante más de Python de lo que esperaba.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

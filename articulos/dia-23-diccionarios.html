@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 23 Diccionarios — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Día 23 Diccionarios</h2>
+            <img src="..//imagenes/agenda.jpg" alt="Día 23 Diccionarios" class="articulo-imagen">
+            <p class="credito"><a href="https://unsplash.com/es/@brett_jordan" target="_blank" rel="noopener">Imagen tomada de Unsplash / Brett Jordan</a></p>
+            <div class="fecha">2026-05-08</div>
+            <div class="categorias">#python</div>
+            
+            <p>Hoy en día casi todos tenemos un teléfono.</p>
+<p>Y aunque lo usamos para muchas cosas, una de sus funciones más básicas sigue siendo la comunicación.</p>
+<p>Para lograrla, normalmente buscamos un contacto dentro de nuestra lista.</p>
+<p>Sabemos a quién queremos encontrar, buscamos su nombre y obtenemos su número.</p>
+<hr>
+<p>En Python existe una estructura que funciona de forma parecida: los diccionarios.</p>
+<p>Un diccionario organiza información en pares de **clave y valor**.</p>
+<p>Es decir, cada dato tiene una referencia única que nos permite encontrarlo rápidamente.</p>
+<hr>
+<p>Por ejemplo:</p>
+<pre><code>
+persona = {"nombre": "Juan",    "edad": 25,    "ciudad": "Madrid"}
+</code></pre>
+<p>Aquí:</p>
+<li>`"nombre"` es una clave</li>
+<li>`"Juan"` es su valor</li>
+<hr>
+<p>Para acceder a un valor, utilizamos su clave:</p>
+<pre><code>
+print(persona["nombre"])print(persona["edad"])
+</code></pre>
+<hr>
+<p>También podemos usar métodos como `get()`, que permite obtener valores de forma segura incluso si la clave no existe.</p>
+<p>Además, los diccionarios incluyen herramientas útiles como:</p>
+<li>`keys()` → muestra las claves</li>
+<li>`values()` → muestra los valores</li>
+<li>`items()` → muestra pares clave-valor</li>
+<li>`update()` → actualiza información</li>
+<hr>
+<p>Algo interesante es que los diccionarios no están pensados para almacenar datos de forma ordenada.</p>
+<p>Su propósito es otro:</p>
+<p>facilitar búsquedas rápidas a partir de una referencia.</p>
+<hr>
+<p>Creo que esta estructura deja algo claro.</p>
+<p>No siempre importa cómo se guardan los datos.</p>
+<p>A veces lo verdaderamente importante es qué tan rápido podemos encontrarlos.</p>
+<p>Y después de venir de C, resulta interesante ver cómo Python simplifica mucho este tipo de organización.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

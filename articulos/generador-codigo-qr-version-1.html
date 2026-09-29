@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador Codigo QR Version 1 — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Generador Codigo QR Version 1</h2>
+            <img src="..//imagenes/generador-V1.png" alt="Generador Codigo QR Version 1" class="articulo-imagen">
+            <p class="credito">Imagen tomada como evidencia del programa realizado</p>
+            <div class="fecha">2026-07-20</div>
+            <div class="categorias">#python</div>
+            
+            <p>Hace unos meses decidí mandar a imprimir mis primeras tarjetas como asesora de viajes. Mientras veía distintos diseños, me di cuenta de que casi todas tenían un código QR.</p>
+<p>Al principio pensé en utilizar alguna página que lo generara por mí. Sin embargo, la mayoría ofrecía códigos dinámicos que dejaban de funcionar después de cierto tiempo o requerían una suscripción para mantenerlos activos.</p>
+<p>Esa solución no terminaba de convencerme.</p>
+<p>Fue entonces cuando me surgió una pregunta:</p>
+<p>**¿Sería capaz de crear uno por mi cuenta utilizando Python?**</p>
+<p>La respuesta me sorprendió.</p>
+<p>Gracias a Python, generar un código QR básico es mucho más sencillo de lo que imaginaba.</p>
+<h2>El corazón del proyecto</h2>
+<p>Para esta primera versión utilicé la librería `qrcode`, una de las más utilizadas por la comunidad de Python para generar códigos QR.</p>
+<p>Su trabajo consiste en transformar la información que queremos compartir —como una dirección web— en la matriz de puntos que después puede interpretar la cámara de un teléfono.</p>
+<h2>El código base</h2>
+<pre><code>
+import qrcode
+
+def generar_qr_basico(url, nombre_archivo="codigo_qr.png"):
+qr = qrcode.QRCode(
+version=1,
+box_size=10,
+border=4
+)
+
+qr.add_data(url)
+qr.make(fit=True)
+
+imagen = qr.make_image(fill_color="black", back_color="white")
+imagen.save(nombre_archivo)
+
+print(f"¡QR generado con éxito y guardado como '{nombre_archivo}'!")
+
+generar_qr_basico("https://github.com")
+</code></pre>
+<h2>¿Qué hace exactamente?</h2>
+<p>Aunque el código es pequeño, detrás ocurren varias cosas interesantes.</p>
+<p>Primero se configura el código QR indicando algunos parámetros importantes.</p>
+<li>`version` determina el tamaño del código QR.</li>
+<li>`box_size` controla el tamaño de cada cuadro.</li>
+<li>`border` agrega un margen que facilita que los lectores puedan reconocerlo correctamente.</li>
+<p>Después añadimos la información que queremos almacenar.</p>
+<p>En este caso, una dirección web.</p>
+<p>Finalmente, la librería genera la imagen y la guarda automáticamente como un archivo `.png`.</p>
+<hr>
+<p>Este proyecto me recordó algo que me gusta mucho de la programación.</p>
+<p>Muchas veces utilizamos herramientas todos los días sin detenernos a pensar cómo funcionan.</p>
+<p>Los códigos QR parecían algo complejo.</p>
+<p>Sin embargo, al entender las herramientas adecuadas, descubrí que detrás existe una lógica bastante accesible.</p>
+<p>Y creo que esa es una de las cosas más satisfactorias de aprender programación: dejar de ver la tecnología como una caja negra y empezar a comprender cómo está construida.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

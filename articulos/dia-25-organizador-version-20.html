@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 25 Organizador Version 2.0 — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Día 25 Organizador Version 2.0</h2>
+            <img src="..//imagenes/organizadorV2.png" alt="Día 25 Organizador Version 2.0" class="articulo-imagen">
+            <p class="credito">Imagen tomada como evidencia del programa realizado</p>
+            <div class="fecha">2026-05-13</div>
+            <div class="categorias">#python</div>
+            
+            <h2>Mejorando mi organizador automático de archivos con Python (Versión 2)</h2>
+<p>Después de construir la primera versión de mi organizador automático de archivos, decidí mejorar el proyecto para hacerlo más limpio, flexible y escalable.</p>
+<p>La versión inicial cumplía correctamente su función: detectar ciertos tipos de archivo y moverlos automáticamente a carpetas específicas. Sin embargo, mientras revisaba el código, noté algo importante: aunque funcionaba, podía organizarse mejor.</p>
+<p>Y creo que eso es algo interesante de aprender programación: resolver un problema es solo el primer paso; después viene entender cómo mejorar la solución.</p>
+<hr>
+<h2>¿Qué hace el proyecto?</h2>
+<p>El programa organiza automáticamente archivos dentro de una carpeta según su extensión.</p>
+<p>Por ejemplo:</p>
+<li>Documentos → `.pdf`, `.docx`, `.txt`</li>
+<li>Imágenes → `.jpg`, `.jpeg`, `.png`</li>
+<li>Comprimidos → `.zip`, `.rar`</li>
+<p>El objetivo sigue siendo automatizar una tarea repetitiva y cotidiana, pero esta vez utilizando una estructura más eficiente.</p>
+<hr>
+<h2>¿Cómo funcionaba la primera versión?</h2>
+<p>La primera versión utilizaba múltiples condiciones `if` y `elif` para clasificar archivos.</p>
+<p>Algo así:</p>
+<pre><code>
+if archivo.endswith(".pdf"):
+</code></pre>
+<p>o</p>
+<pre><code>
+elif archivo.endswith((".jpg", ".jpeg", ".png")):
+</code></pre>
+<p>Aunque esto funciona correctamente, el código empieza a crecer rápidamente conforme agregamos más tipos de archivo.</p>
+<hr>
+<h1>La mejora principal: usar un diccionario</h1>
+<p>En esta segunda versión, reemplacé múltiples condicionales por un diccionario que almacena categorías y extensiones.</p>
+<pre><code>
+CARPETAS = {
+"Documents": [".pdf", ".docx", ".txt"],
+"Pictures": [".jpg", ".jpeg", ".png"],
+"Compressed": [".zip", ".rar"]}
+</code></pre>
+<p>Esto me permitió separar la configuración de la lógica principal del programa.</p>
+<p>Ahora, si quiero agregar una nueva categoría o extensión, solo necesito modificar el diccionario, sin cambiar toda la estructura del código.</p>
+<hr>
+<h2>¿Que mejoro con esta version?</h2>
+<p>El código se vuelve:</p>
+<li>más limpio</li>
+<li>más fácil de mantener</li>
+<li>más flexible</li>
+<li>más escalable</li>
+<p>Además, me ayudó a entender cómo las estructuras de datos pueden simplificar problemas que inicialmente parecen requerir muchas condiciones.</p>
+<hr>
+<h2>Trabajando con rutas de archivos</h2>
+<p>Otra mejora importante fue utilizar:</p>
+<pre><code>
+os.path.join()
+</code></pre>
+<p>En la primera versión construía rutas manualmente usando:</p>
+<pre><code>
+f"{carpeta}/{archivo}"
+</code></pre>
+<p>Pero `os.path.join()` es una mejor práctica porque permite trabajar correctamente con rutas en diferentes sistemas operativos.</p>
+<hr>
+<h2>Detectando extensiones de forma más precisa</h2>
+<p>También utilicé:</p>
+<pre><code>
+os.path.splitext(archivo)[1].lower()
+</code></pre>
+<p>Esto me permitió:</p>
+<li>separar la extensión del nombre del archivo</li>
+<li>convertir extensiones como `.JPG` o `.PNG` a minúsculas</li>
+<li>evitar errores por diferencias entre mayúsculas y minúsculas</li>
+<hr>
+<h2>Recorriendo archivos automáticamente</h2>
+<p>Para revisar todos los archivos de la carpeta utilicé un loop:</p>
+<pre><code>
+for archivo in os.listdir(carpeta):
+</code></pre>
+<p>Y para evitar problemas con carpetas dentro de la carpeta principal, agregué:</p>
+<pre><code>
+if os.path.isfile(ruta_archivo):
+</code></pre>
+<p>Esto asegura que el script solo procese archivos reales.</p>
+<hr>
+<h2>Agregando retroalimentación visual</h2>
+<p>También añadí mensajes en consola para observar qué hace el programa mientras se ejecuta:</p>
+<pre><code>
+print(f"Moved: {archivo} → {carpeta_destino}")
+</code></pre>
+<p>Esto facilita entender el flujo del programa y detectar posibles errores.</p>
+<hr>
+<h2>Lo más importante que aprendí</h2>
+<p>Con esta segunda versión entendí algo que me parece fundamental:</p>
+<p>Programar no se trata únicamente de hacer que algo funcione, sino también de pensar cómo hacerlo mejor.</p>
+<p>Refactorizar código, simplificar estructuras y crear soluciones más escalables forma parte del proceso de aprendizaje.</p>
+<p>Este proyecto me permitió practicar:</p>
+<li>loops</li>
+<li>condicionales</li>
+<li>diccionarios</li>
+<li>manipulación de archivos</li>
+<li>validaciones</li>
+<li>organización de código</li>
+<p>Pero sobre todo, me ayudó a entender cómo pequeños conceptos comienzan a conectarse para crear herramientas útiles.</p>
+<hr>
+<h2>Reflexión final</h2>
+<p>Creo que esta segunda versión me enseñó algo importante:</p>
+<p>La programación no termina cuando el código funciona.</p>
+<p>Muchas veces, ahí es donde realmente empieza el aprendizaje.</p>
+<p>Porque mejorar una solución también implica entenderla mejor.</p>
+<p>La primera versión me ayudó a resolver el problema.</p>
+<p>La segunda me obligó a pensar más en estructura, organización y escalabilidad.</p>
+<p>Y creo que esa evolución —más que el proyecto en sí— es una de las partes más interesantes de aprender programación.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

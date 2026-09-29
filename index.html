@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizonte Abierto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="imagenes/icono.png">
+</head>
+<body>
+    <header class="hero" id="inicio">
+        <!-- NUEVO: Menú de navegación -->
+        <nav class="menu">
+            <div class="menu-logo">
+                <img src="imagenes/icono.png" alt="Horizonte Abierto" class="logo-icono">
+                <span>Horizonte Abierto</span>
+            </div>
+            <div class="menu-centro">
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-autor">Sobre el autor</a>
+                <a href="#articulos">Artículos</a>
+            </div>
+            <div class="menu-der">
+                <a href="https://github.com/SanJuanaMtz" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49v-1.71c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.09 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05.8-.23 1.65-.34 2.5-.34.85 0 1.7.11 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.64 1.03 2.76 0 3.96-2.34 4.83-4.57 5.08.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/>
+                </svg>
+                </a>
+                <a href="https://threads.net/@san_mtz.s" target="_blank" rel="noopener" aria-label="Threads">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M12 3c-2 0-3 1-3 3v9c0 2 1 3 3 3s3-1 3-3v-4h-2"/>
+                        <path d="M9 10h6"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+        <img src="imagenes/portada.jpg" alt="Horizonte Abierto" class="hero-imagen">
+        <div class="hero-contenido">
+            <h1>Horizonte<span>abierto</span></h1>
+            <p>Una bitácora de mi camino por CS50, los lenguajes y el mundo.</p>
+            <p class="hero-descripcion">Un espacio para explorar, aprender y conectar ideas — donde la programación, los idiomas y los viajes se encuentran.</p>
+        </div>
+    </header>
+
+    <!-- NUEVO: Sobre el autor -->
+    <section class="sobre-autor" id="sobre-autor">
+        <h2>Sobre la autora</h2>
+        <div class="sobre-grid">
+            <div class="sobre-foto">
+                <img src="imagenes/photo.jpeg" alt="San Martinez">
+            </div>
+            <div class="sobre-info">
+            <p>Soy Ingeniera en Sistemas Computacionales, apasionada por el conocimiento y la escritura.</p>
+            <p>Me considero una persona curiosa, interesada en aprender de distintas áreas. En un mundo que suele exigir especialización, me inclino más hacia explorar, 
+                entender y conectar ideas.</p>
+            <p>Mi objetivo es compartir lo que aprendo y lo que me interesa, con la esperanza de que pueda ser útil para otros.</p>
+            <p>Hoy estoy en un proceso de reaprendizaje y reconstrucción, retomando la programación y explorando diferentes temas como idiomas, cultura, historia y tecnología.</p>
+            <p>Este espacio nace como parte de ese proceso.</p>
+
+            <!-- Botones de redes  -->
+            <div class="redes-botones">
+                <a href="https://github.com/SanJuanaMtz" target="_blank" rel="noopener" class="boton-red">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49v-1.71c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.09 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05.8-.23 1.65-.34 2.5-.34.85 0 1.7.11 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.64 1.03 2.76 0 3.96-2.34 4.83-4.57 5.08.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/>
+                    </svg> GitHub
+                </a>
+                <a href="https://threads.net/@san_mtz.s" target="_blank" rel="noopener" class="boton-red">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M12 3c-2 0-3 1-3 3v9c0 2 1 3 3 3s3-1 3-3v-4h-2"/>
+                        <path d="M9 10h6"/>
+                    </svg> Threads
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <nav class="filtros" id="articulos">
+        <button class="activo" data-categoria="todas">Todas</button>
+    <button data-categoria="ia">Ia</button>
+    <button data-categoria="sql">Sql</button>
+    <button data-categoria="python">Python</button>
+    <button data-categoria="peliculas">Peliculas</button>
+    <button data-categoria="ingles">Ingles</button>
+    <button data-categoria="italiano">Italiano</button>
+    <button data-categoria="travel">Travel</button>
+    <button data-categoria="libros">Libros</button>
+    <button data-categoria="tecnologia">Tecnologia</button>
+    <button data-categoria="c">C</button>
+    </nav>
+
+    <main class="grid">
+        <article class="card" data-categorias="ia" data-extracto="Hace 18 años se estrenó *Iron Man* por primera vez en cines y, aunque en ese momento no podía saberlo, aquella película marcó un antes y un después en mis...">
+        <img src="imagenes/ironman.jpg" alt="Día 45 J.A.R.V.I.S, Iron Man y el futuro que imaginábamos" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@worldtravelwithjean" target="_blank" rel="noopener">Imagen tomada de Unsplash / Jéan Béller</a></p>
+        <h2>Día 45 J.A.R.V.I.S, Iron Man y el futuro que imaginábamos</h2>
+        <div class="fecha">2026-09-15</div>
+        <p>Hace 18 años se estrenó *Iron Man* por primera vez en cines y, aunque en ese momento no podía saberlo, aquella película marcó un antes y un después en mis...</p>
+    </article>
+    <article class="card" data-categorias="ia" data-extracto="Recuerdo uno de mis breakdowns durante mi carrera en Sistemas. Estábamos realizando un proyecto bastante interesante para la universidad, con la esperanza de terminar el ciclo sin demasiados problemas después...">
+        <img src="imagenes/patito-goma.jpg" alt="Día 44 Antes de la IA, estaba el patito de goma" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@jasonthedesigner" target="_blank" rel="noopener">Imagen tomada de Unsplash / Jason Richard</a></p>
+        <h2>Día 44 Antes de la IA, estaba el patito de goma</h2>
+        <div class="fecha">2026-09-07</div>
+        <p>Recuerdo uno de mis breakdowns durante mi carrera en Sistemas. Estábamos realizando un proyecto bastante interesante para la universidad, con la esperanza de terminar el ciclo sin demasiados problemas después...</p>
+    </article>
+    <article class="card" data-categorias="sql" data-extracto="Las bases de datos son herramientas fundamentales en la vida real. Gran parte de la información que almacenan pertenece a clientes, usuarios, empresas o proveedores de servicios, por lo que...">
+        <img src="imagenes/sql-injection.jpg" alt="Día 43 SQL Injection" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@markusspiske" target="_blank" rel="noopener">Imagen tomada de Unsplash / Markus Spiske</a></p>
+        <h2>Día 43 SQL Injection</h2>
+        <div class="fecha">2026-08-27</div>
+        <p>Las bases de datos son herramientas fundamentales en la vida real. Gran parte de la información que almacenan pertenece a clientes, usuarios, empresas o proveedores de servicios, por lo que...</p>
+    </article>
+    <article class="card" data-categorias="sql python" data-extracto="# Cuando los caminos comienzan a conectarse Cada ocasión en que aprendíamos un lenguaje nuevo me sentía un poco como Thanos al conseguir una gema nueva. Cada lenguaje parecía abrir...">
+        <img src="imagenes/sql-python.jpg" alt="Día 42 SQL y Python" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@casparrubin" target="_blank" rel="noopener">Imagen tomada de Unsplash / Caspar Camille Rubin</a></p>
+        <h2>Día 42 SQL y Python</h2>
+        <div class="fecha">2026-08-24</div>
+        <p># Cuando los caminos comienzan a conectarse Cada ocasión en que aprendíamos un lenguaje nuevo me sentía un poco como Thanos al conseguir una gema nueva. Cada lenguaje parecía abrir...</p>
+    </article>
+    <article class="card" data-categorias="sql" data-extracto="## Los caminos que elegimos para encontrar algo Hace unos días estuve corriendo mientras admiraba el paisaje en cada momento. Correr se ha convertido en una de mis actividades favoritas,...">
+        <img src="imagenes/indices.jpg" alt="Día 41 Indices en SQL" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@hocza" target="_blank" rel="noopener">Imagen tomada de Unsplash / Jozsef Hocza</a></p>
+        <h2>Día 41 Indices en SQL</h2>
+        <div class="fecha">2026-08-21</div>
+        <p>## Los caminos que elegimos para encontrar algo Hace unos días estuve corriendo mientras admiraba el paisaje en cada momento. Correr se ha convertido en una de mis actividades favoritas,...</p>
+    </article>
+    <article class="card" data-categorias="sql" data-extracto="Cuando los días son tan frescos que el mismo aire se siente agradable en el rostro, no puedo dejar de pensar en lo delicioso que huele el café. Y casi...">
+        <img src="imagenes/pan-y-cafe.jpg" alt="Día 40 Café, pan y tablas que se encuentran" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@camaranegra" target="_blank" rel="noopener">Imagen tomada de Unsplash / Camara Negra</a></p>
+        <h2>Día 40 Café, pan y tablas que se encuentran</h2>
+        <div class="fecha">2026-08-17</div>
+        <p>Cuando los días son tan frescos que el mismo aire se siente agradable en el rostro, no puedo dejar de pensar en lo delicioso que huele el café. Y casi...</p>
+    </article>
+    <article class="card" data-categorias="sql" data-extracto="### Cuando buscar ya no es suficiente: funciones en SQL Conocer las herramientas que nos proporciona SQL para realizar consultas nos ayuda a mejorar nuestras búsquedas. Comandos como `WHERE`, `LIKE`,...">
+        <img src="imagenes/libros.jpg" alt="Día 39 Funciones en SQL" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@gulfergin_01" target="_blank" rel="noopener">Imagen tomada de Unsplash / Gülfer ERGİN</a></p>
+        <h2>Día 39 Funciones en SQL</h2>
+        <div class="fecha">2026-08-14</div>
+        <p>### Cuando buscar ya no es suficiente: funciones en SQL Conocer las herramientas que nos proporciona SQL para realizar consultas nos ayuda a mejorar nuestras búsquedas. Comandos como `WHERE`, `LIKE`,...</p>
+    </article>
+    <article class="card" data-categorias="" data-extracto="## La bibliotecaria que me enseñó a entender el CRUD Cuando leí *La biblioteca de la medianoche*, hubo una idea que no dejaba de dar vueltas en mi cabeza. La...">
+        <img src="imagenes/libreria.jpg" alt="Día 36 Bases de datos" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@jonathan_francisca" target="_blank" rel="noopener">Imagen tomada de Unsplash / Jonathan Francisca</a></p>
+        <h2>Día 36 Bases de datos</h2>
+        <div class="fecha">2026-08-11</div>
+        <p>## La bibliotecaria que me enseñó a entender el CRUD Cuando leí *La biblioteca de la medianoche*, hubo una idea que no dejaba de dar vueltas en mi cabeza. La...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="En programación, muchas veces necesitamos organizar información. Pero no siempre queremos guardar todo tal como llega. A veces necesitamos quedarnos únicamente con elementos únicos, sin repeticiones. Ahí es donde entran...">
+        <img src="imagenes/conjuntos.jpg" alt="Día 24 Conjuntos" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@mocaandrew" target="_blank" rel="noopener">Imagen tomada de Unsplash / Andrew Moca</a></p>
+        <h2>Día 24 Conjuntos</h2>
+        <div class="fecha">2026-08-11</div>
+        <p>En programación, muchas veces necesitamos organizar información. Pero no siempre queremos guardar todo tal como llega. A veces necesitamos quedarnos únicamente con elementos únicos, sin repeticiones. Ahí es donde entran...</p>
+    </article>
+    <article class="card" data-categorias="sql" data-extracto="## Aprendiendo a buscar entre los datos con SQL Ahora que conocemos un poco más sobre las tablas relacionales y lo que podemos hacer mediante comandos, como las operaciones que...">
+        <img src="imagenes/tools.jpg" alt="Día 38 Herramientas de SQL" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@gulfergin_01" target="_blank" rel="noopener">Imagen tomada de Unsplash / Mohammad Rahmani</a></p>
+        <h2>Día 38 Herramientas de SQL</h2>
+        <div class="fecha">2026-08-11</div>
+        <p>## Aprendiendo a buscar entre los datos con SQL Ahora que conocemos un poco más sobre las tablas relacionales y lo que podemos hacer mediante comandos, como las operaciones que...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="### De un QR bonito a una herramienta real (Versión 4) Mi código QR ya era un éxito… o al menos, para el nivel estético que estaba buscando. Tenía los...">
+        <img src="imagenes/generadorV4.png" alt="Generador Codigo QR Version 4" class="card-imagen">
+         <p class="credito-card">Imagen tomada como evidencia del programa realizado</p>
+        <h2>Generador Codigo QR Version 4</h2>
+        <div class="fecha">2026-08-06</div>
+        <p>### De un QR bonito a una herramienta real (Versión 4) Mi código QR ya era un éxito… o al menos, para el nivel estético que estaba buscando. Tenía los...</p>
+    </article>
+    <article class="card" data-categorias="peliculas" data-extracto="Hace aproximadamente un mes vi una película que me dejó pensando durante días. No suelo ver películas de este género, pero el ruido que había alrededor de ella en redes...">
+        <img src="imagenes/obsesion.jpg" alt="Cuando el deseo deja de ser amor" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@entradaphotography" target="_blank" rel="noopener">Imagen tomada de Unsplash / Esther Tuttle</a></p>
+        <h2>Cuando el deseo deja de ser amor</h2>
+        <div class="fecha">2026-08-03</div>
+        <p>Hace aproximadamente un mes vi una película que me dejó pensando durante días. No suelo ver películas de este género, pero el ruido que había alrededor de ella en redes...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="## Personalizando mi generador de códigos QR (Versiones 2 y 3) Después de generar la primera versión de mi código QR, me di cuenta de que cumplía perfectamente su función....">
+        <img src="imagenes/generador-V23.png" alt="Generador Codigo QR Version 2 y 3" class="card-imagen">
+         <p class="credito-card">Imagen tomada como evidencia del programa realizado</p>
+        <h2>Generador Codigo QR Version 2 y 3</h2>
+        <div class="fecha">2026-07-31</div>
+        <p>## Personalizando mi generador de códigos QR (Versiones 2 y 3) Después de generar la primera versión de mi código QR, me di cuenta de que cumplía perfectamente su función....</p>
+    </article>
+    <article class="card" data-categorias="sql" data-extracto="## Lo que Blockbuster me recordó sobre las tablas en SQL Hace unos días, mientras cuidaba a mis sobrinos y limpiaba la casa, uno de ellos encontró una vieja película...">
+        <img src="imagenes/tablas.jpg" alt="Día 37 Tablas en SQL" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@dismilated" target="_blank" rel="noopener">Imagen tomada de Unsplash / Mikhail Pushkarev</a></p>
+        <h2>Día 37 Tablas en SQL</h2>
+        <div class="fecha">2026-07-27</div>
+        <p>## Lo que Blockbuster me recordó sobre las tablas en SQL Hace unos días, mientras cuidaba a mis sobrinos y limpiaba la casa, uno de ellos encontró una vieja película...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="Hace unos meses decidí mandar a imprimir mis primeras tarjetas como asesora de viajes. Mientras veía distintos diseños, me di cuenta de que casi todas tenían un código QR. Al...">
+        <img src="imagenes/generador-V1.png" alt="Generador Codigo QR Version 1" class="card-imagen">
+         <p class="credito-card">Imagen tomada como evidencia del programa realizado</p>
+        <h2>Generador Codigo QR Version 1</h2>
+        <div class="fecha">2026-07-20</div>
+        <p>Hace unos meses decidí mandar a imprimir mis primeras tarjetas como asesora de viajes. Mientras veía distintos diseños, me di cuenta de que casi todas tenían un código QR. Al...</p>
+    </article>
+    <article class="card" data-categorias="sql" data-extracto="## SQL, rompecabezas y juegos de encaje Durante mi infancia tenía una ligera obsesión con los rompecabezas. Me fascinaba la idea de tomar cientos de piezas dispersas y, poco a...">
+        <img src="imagenes/sql-juegos.jpg" alt="Día 35 SQL" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@bozu" target="_blank" rel="noopener">Imagen tomada de Unsplash / Michał Bożek</a></p>
+        <h2>Día 35 SQL</h2>
+        <div class="fecha">2026-07-07</div>
+        <p>## SQL, rompecabezas y juegos de encaje Durante mi infancia tenía una ligera obsesión con los rompecabezas. Me fascinaba la idea de tomar cientos de piezas dispersas y, poco a...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="## Terminando Python y regresando a SQL Hace algunos meses comencé mi camino con Python. Al principio, la transición desde C me pareció extraña. Durante mi formación académica trabajé principalmente...">
+        <img src="imagenes/camino.jpg" alt="Día 34 Bye Python, Salve SQL" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@aldyrkhanov" target="_blank" rel="noopener">Imagen tomada de Unsplash / Artur Aldyrkhanov</a></p>
+        <h2>Día 34 Bye Python, Salve SQL</h2>
+        <div class="fecha">2026-07-01</div>
+        <p>## Terminando Python y regresando a SQL Hace algunos meses comencé mi camino con Python. Al principio, la transición desde C me pareció extraña. Durante mi formación académica trabajé principalmente...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="Cuando era niña y vi por primera vez *Mary Poppins*, recuerdo haberme fascinado con una idea en particular. Su bolso. De él podía sacar una lámpara, una planta o prácticamente...">
+        <img src="imagenes/bolsa.jpg" alt="Día 33 Mary Poppins" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@guillaumedegermain" target="_blank" rel="noopener">Imagen tomada de Unsplash / Guillaume de Germain</a></p>
+        <h2>Día 33 Mary Poppins</h2>
+        <div class="fecha">2026-06-26</div>
+        <p>Cuando era niña y vi por primera vez *Mary Poppins*, recuerdo haberme fascinado con una idea en particular. Su bolso. De él podía sacar una lámpara, una planta o prácticamente...</p>
+    </article>
+    <article class="card" data-categorias="ingles italiano python" data-extracto="Hace algunos meses comencé a aprender un nuevo idioma como fondo. Como esa música que suena mientras haces otra cosa, así empezó el italiano para mí. Mi prioridad seguía siendo...">
+        <img src="imagenes/italia.jpg" alt="Mix de idiomas" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@loggi30" target="_blank" rel="noopener">Imagen tomada de Unsplash / Ananthan Loggi</a></p>
+        <h2>Mix de idiomas</h2>
+        <div class="fecha">2026-06-23</div>
+        <p>Hace algunos meses comencé a aprender un nuevo idioma como fondo. Como esa música que suena mientras haces otra cosa, así empezó el italiano para mí. Mi prioridad seguía siendo...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="Actualmente interactuamos con la tecnología de formas que hace algunos años parecían imposibles. Hablamos con asistentes virtuales, realizamos búsquedas en segundos y utilizamos herramientas de inteligencia artificial para obtener información...">
+        <img src="imagenes/entra-sal.jpg" alt="Día 32 Entradas y Salidas" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@wocintechchat" target="_blank" rel="noopener">Imagen tomada de Unsplash / Christina @ wocintechchat.com M</a></p>
+        <h2>Día 32 Entradas y Salidas</h2>
+        <div class="fecha">2026-06-16</div>
+        <p>Actualmente interactuamos con la tecnología de formas que hace algunos años parecían imposibles. Hablamos con asistentes virtuales, realizamos búsquedas en segundos y utilizamos herramientas de inteligencia artificial para obtener información...</p>
+    </article>
+    <article class="card" data-categorias="travel python libros italiano ingles" data-extracto="## Cómo sigo aprendiendo tantas cosas sin volverme loca Hace poco comencé una nueva etapa que me emociona bastante. Inicié mi formación para certificarme como asesora de viajes, algo que...">
+        <img src="imagenes/aprender.jpg" alt="Aprender sin rigudez" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@uns__nstudio" target="_blank" rel="noopener">Imagen tomada de Unsplash / Unseen Studio</a></p>
+        <h2>Aprender sin rigudez</h2>
+        <div class="fecha">2026-06-11</div>
+        <p>## Cómo sigo aprendiendo tantas cosas sin volverme loca Hace poco comencé una nueva etapa que me emociona bastante. Inicié mi formación para certificarme como asesora de viajes, algo que...</p>
+    </article>
+    <article class="card" data-categorias="tecnologia python" data-extracto="## Excepciones personalizadas Cada persona es diferente. Aunque podamos compartir gustos, experiencias o formas de pensar, siempre existen pequeños detalles que nos distinguen unos de otros. La tecnología ha aprendido...">
+        <img src="imagenes/excepcion.jpg" alt="Día 31 Excepciones Personalizadas" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@silverkblack" target="_blank" rel="noopener">Imagen tomada de Unsplash / Vitaly Gariev</a></p>
+        <h2>Día 31 Excepciones Personalizadas</h2>
+        <div class="fecha">2026-06-05</div>
+        <p>## Excepciones personalizadas Cada persona es diferente. Aunque podamos compartir gustos, experiencias o formas de pensar, siempre existen pequeños detalles que nos distinguen unos de otros. La tecnología ha aprendido...</p>
+    </article>
+    <article class="card" data-categorias="libros" data-extracto="## Aunque el cielo esté gris Cuando era niña y miraba las estrellas, me preguntaba qué se sentiría subir hasta allá y poder verlas de cerca. Pasé gran parte de...">
+        <img src="imagenes/medianoche.png" alt="La Biblioteca de Medianoche" class="card-imagen">
+         <p class="credito-card">Imagen tomada del libro La Biblioteca de Medianoche de Matt Haig</p>
+        <h2>La Biblioteca de Medianoche</h2>
+        <div class="fecha">2026-06-01</div>
+        <p>## Aunque el cielo esté gris Cuando era niña y miraba las estrellas, me preguntaba qué se sentiría subir hasta allá y poder verlas de cerca. Pasé gran parte de...</p>
+    </article>
+    <article class="card" data-categorias="python tecnologia" data-extracto="## Construyendo un organizador de archivos con interfaz en Python: de una idea simple a una herramienta funcional A veces una necesidad sencilla termina convirtiéndose en un proyecto mucho más...">
+        <img src="imagenes/organizadorV3.png" alt="Día 30 Organizador Version 3.0" class="card-imagen">
+         <p class="credito-card">Imagen tomada como evidencia del programa realizado</p>
+        <h2>Día 30 Organizador Version 3.0</h2>
+        <div class="fecha">2026-05-27</div>
+        <p>## Construyendo un organizador de archivos con interfaz en Python: de una idea simple a una herramienta funcional A veces una necesidad sencilla termina convirtiéndose en un proyecto mucho más...</p>
+    </article>
+    <article class="card" data-categorias="python ingles tecnologia" data-extracto="**El inglés y Python tienen una complejidad sorprendentemente similar.** Cuando estudié C hace un tiempo, recuerdo sentir que estaba aprendiendo algo tan distinto que incluso me hacía pensar en otro...">
+        <img src="imagenes/lenguajes.jpg" alt="Ingles y Python" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@lingapp" target="_blank" rel="noopener">Imagen tomada de Unsplash / Ling App</a></p>
+        <h2>Ingles y Python</h2>
+        <div class="fecha">2026-05-25</div>
+        <p>**El inglés y Python tienen una complejidad sorprendentemente similar.** Cuando estudié C hace un tiempo, recuerdo sentir que estaba aprendiendo algo tan distinto que incluso me hacía pensar en otro...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="Cuando nos equivocamos es fácil culparnos o frustrarnos con nosotros mismos. Y honestamente, equivocarse es algo tan humano que a veces pareciera que nacemos sabiendo hacerlo. Creo que gran parte...">
+        <img src="imagenes/not-found.jpg" alt="Día 29 Excepciones" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@introspectivedsgn" target="_blank" rel="noopener">Imagen tomada de Unsplash / Erik Mclean</a></p>
+        <h2>Día 29 Excepciones</h2>
+        <div class="fecha">2026-05-21</div>
+        <p>Cuando nos equivocamos es fácil culparnos o frustrarnos con nosotros mismos. Y honestamente, equivocarse es algo tan humano que a veces pareciera que nacemos sabiendo hacerlo. Creo que gran parte...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="Actualmente las redes sociales nos mantienen conectados con personas de todo el mundo. Probablemente son de los sitios que más utilizamos en nuestra vida diaria. Compartimos memes, reaccionamos a publicaciones,...">
+        <img src="imagenes/abstraccion.jpg" alt="Día 28 Abstracción" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@rami_alzayat" target="_blank" rel="noopener">Imagen tomada de Unsplash / Rami Al-zayat</a></p>
+        <h2>Día 28 Abstracción</h2>
+        <div class="fecha">2026-05-19</div>
+        <p>Actualmente las redes sociales nos mantienen conectados con personas de todo el mundo. Probablemente son de los sitios que más utilizamos en nuestra vida diaria. Compartimos memes, reaccionamos a publicaciones,...</p>
+    </article>
+    <article class="card" data-categorias="travel tecnologia" data-extracto="Hace unos meses estaba procrastinando avanzar en programación. No porque no supiera qué hacer o cómo hacerlo. Era porque había demasiada información allá afuera. Todos parecían decirme: - qué debía...">
+        <img src="imagenes/cambia.jpg" alt="Aprender te cambia" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@roborobs" target="_blank" rel="noopener">Imagen tomada de Unsplash / Robynne O</a></p>
+        <h2>Aprender te cambia</h2>
+        <div class="fecha">2026-05-18</div>
+        <p>Hace unos meses estaba procrastinando avanzar en programación. No porque no supiera qué hacer o cómo hacerlo. Era porque había demasiada información allá afuera. Todos parecían decirme: - qué debía...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="## **Programación Orientada a Objetos** Hace unos días, mientras esperaba en el aeropuerto para cruzar medio país hasta Ciudad de México, noté algo interesante. A todos los pasajeros se nos...">
+        <img src="imagenes/aeropuerto.jpg" alt="Día 26 POO" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@philm1" target="_blank" rel="noopener">Imagen tomada de Unsplash / Phil Mosley</a></p>
+        <h2>Día 26 POO</h2>
+        <div class="fecha">2026-05-15</div>
+        <p>## **Programación Orientada a Objetos** Hace unos días, mientras esperaba en el aeropuerto para cruzar medio país hasta Ciudad de México, noté algo interesante. A todos los pasajeros se nos...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="## Mejorando mi organizador automático de archivos con Python (Versión 2) Después de construir la primera versión de mi organizador automático de archivos, decidí mejorar el proyecto para hacerlo más...">
+        <img src="imagenes/organizadorV2.png" alt="Día 25 Organizador Version 2.0" class="card-imagen">
+         <p class="credito-card">Imagen tomada como evidencia del programa realizado</p>
+        <h2>Día 25 Organizador Version 2.0</h2>
+        <div class="fecha">2026-05-13</div>
+        <p>## Mejorando mi organizador automático de archivos con Python (Versión 2) Después de construir la primera versión de mi organizador automático de archivos, decidí mejorar el proyecto para hacerlo más...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="Hoy en día casi todos tenemos un teléfono. Y aunque lo usamos para muchas cosas, una de sus funciones más básicas sigue siendo la comunicación. Para lograrla, normalmente buscamos un...">
+        <img src="imagenes/agenda.jpg" alt="Día 23 Diccionarios" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@brett_jordan" target="_blank" rel="noopener">Imagen tomada de Unsplash / Brett Jordan</a></p>
+        <h2>Día 23 Diccionarios</h2>
+        <div class="fecha">2026-05-08</div>
+        <p>Hoy en día casi todos tenemos un teléfono. Y aunque lo usamos para muchas cosas, una de sus funciones más básicas sigue siendo la comunicación. Para lograrla, normalmente buscamos un...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="Cuando estudiamos listas, es inevitable recordar los arrays que vimos anteriormente en C. Ambas estructuras nos permiten organizar varios datos en un mismo lugar. Sin embargo, al seguir avanzando en...">
+        <img src="imagenes/tuplas.jpg" alt="Día 22 Tuplas" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@amanz" target="_blank" rel="noopener">Imagen tomada de Unsplash / Amanz</a></p>
+        <h2>Día 22 Tuplas</h2>
+        <div class="fecha">2026-05-07</div>
+        <p>Cuando estudiamos listas, es inevitable recordar los arrays que vimos anteriormente en C. Ambas estructuras nos permiten organizar varios datos en un mismo lugar. Sin embargo, al seguir avanzando en...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="Hace apenas una semana estábamos recorriendo este camino en C. Ahora, en Python, muchas cosas comienzan a sentirse familiares. Y eso es interesante, porque aunque cambie el lenguaje, varios conceptos...">
+        <img src="imagenes/listas.jpg" alt="Día 21 Listas" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@glenncarstenspeters" target="_blank" rel="noopener">Imagen tomada de Unsplash / Glenn Carstens-Peters</a></p>
+        <h2>Día 21 Listas</h2>
+        <div class="fecha">2026-05-05</div>
+        <p>Hace apenas una semana estábamos recorriendo este camino en C. Ahora, en Python, muchas cosas comienzan a sentirse familiares. Y eso es interesante, porque aunque cambie el lenguaje, varios conceptos...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="## Organizador automático de archivos con Python Hoy construí un pequeño proyecto en Python: un organizador automático de archivos. La idea surgió de un problema cotidiano: las carpetas como “Descargas”...">
+        <img src="imagenes/organizadorV1.png" alt="Día 20 Organizador de Archivos" class="card-imagen">
+         <p class="credito-card">Imagen tomada como evidencia del programa realizado</p>
+        <h2>Día 20 Organizador de Archivos</h2>
+        <div class="fecha">2026-05-04</div>
+        <p>## Organizador automático de archivos con Python Hoy construí un pequeño proyecto en Python: un organizador automático de archivos. La idea surgió de un problema cotidiano: las carpetas como “Descargas”...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="## Las acciones que repetimos En el día a día solemos repetir muchas acciones. Lavamos nuestros dientes, nuestra cara, aplicamos cremas, bloqueador solar… incluso seguimos pequeñas rutinas antes de salir...">
+        <img src="imagenes/rutina.jpg" alt="Día 19 Bucles" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@helloimnik" target="_blank" rel="noopener">Imagen tomada de Unsplash / Nik</a></p>
+        <h2>Día 19 Bucles</h2>
+        <div class="fecha">2026-05-01</div>
+        <p>## Las acciones que repetimos En el día a día solemos repetir muchas acciones. Lavamos nuestros dientes, nuestra cara, aplicamos cremas, bloqueador solar… incluso seguimos pequeñas rutinas antes de salir...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="**Estructuras de control: Condicionales** Tomar decisiones es algo que hacemos todos los días. Elegimos qué comprar, qué camino tomar o incluso qué decir en cierto momento. A veces es fácil....">
+        <img src="imagenes/condicional.jpg" alt="Día 18 Condicionales" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@artturijalli" target="_blank" rel="noopener">Imagen tomada de Unsplash / Artturi Jalli</a></p>
+        <h2>Día 18 Condicionales</h2>
+        <div class="fecha">2026-04-30</div>
+        <p>**Estructuras de control: Condicionales** Tomar decisiones es algo que hacemos todos los días. Elegimos qué comprar, qué camino tomar o incluso qué decir en cierto momento. A veces es fácil....</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="Después de trabajar con variables y operadores, llega algo que cambia bastante la forma en la que programamos: las funciones. Hasta ahora hemos estado haciendo operaciones directamente. Pero una función...">
+        <img src="imagenes/funcion.jpg" alt="Día 17 Funciones" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@markusspiske" target="_blank" rel="noopener">Imagen tomada de Unsplash / Shahadat Rahman</a></p>
+        <h2>Día 17 Funciones</h2>
+        <div class="fecha">2026-04-29</div>
+        <p>Después de trabajar con variables y operadores, llega algo que cambia bastante la forma en la que programamos: las funciones. Hasta ahora hemos estado haciendo operaciones directamente. Pero una función...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="Una vez que comprendemos las variables, es natural querer empezar a usarlas. Es como cuando aprendemos los números. De pronto, contar se vuelve parte de todo: las líneas en el...">
+        <img src="imagenes/educar.jpg" alt="Día 16 Operadores" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@anniespratt" target="_blank" rel="noopener">Imagen tomada de Unsplash / Annie Spratt</a></p>
+        <h2>Día 16 Operadores</h2>
+        <div class="fecha">2026-04-28</div>
+        <p>Una vez que comprendemos las variables, es natural querer empezar a usarlas. Es como cuando aprendemos los números. De pronto, contar se vuelve parte de todo: las líneas en el...</p>
+    </article>
+    <article class="card" data-categorias="python" data-extracto="Las variables son una de las primeras cosas que vemos al empezar a programar, y aunque parecen simples, son la base de todo. En Python, algo que cambia desde el...">
+        <img src="imagenes/variables.jpg" alt="Día 15 Variables" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@octadan" target="_blank" rel="noopener">Imagen tomada de Unsplash / Octavian-Dan Craciun</a></p>
+        <h2>Día 15 Variables</h2>
+        <div class="fecha">2026-04-25</div>
+        <p>Las variables son una de las primeras cosas que vemos al empezar a programar, y aunque parecen simples, son la base de todo. En Python, algo que cambia desde el...</p>
+    </article>
+    <article class="card" data-categorias="python c" data-extracto="*Disclaimer: Para realizar estas notas y las siguientes de este curso de Python, he añadido un curso extra como apoyo a mi aprendizaje que pueden encontrar en la plataforma de...">
+        <img src="imagenes/c-python.jpg" alt="Día 14 De C a Python" class="card-imagen">
+         <p class="credito-card"><a href="https://unsplash.com/es/@zgraves" target="_blank" rel="noopener">Imagen tomada de Unsplash /  Zach Graves</a></p>
+        <h2>Día 14 De C a Python</h2>
+        <div class="fecha">2026-04-23</div>
+        <p>*Disclaimer: Para realizar estas notas y las siguientes de este curso de Python, he añadido un curso extra como apoyo a mi aprendizaje que pueden encontrar en la plataforma de...</p>
+    </article>
+    </main>
+
+    <div class="ver-mas-contenedor">
+        <button id="btn-ver-mas" class="boton-ver-mas">Ver más</button>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-contenido">
+            <button class="modal-cerrar" id="modalCerrar">×</button>
+            <h2 id="modalTitulo"></h2>
+            <img src="" alt="" id="modalImagen" class="modal-imagen">
+            <p class="credito-modal" id="modalCredito"></p>
+            <div class="modal-meta">
+                <span class="fecha" id="modalFecha"></span>
+                <span class="categorias" id="modalCategorias"></span>
+            </div>
+            <p id="modalExtracto"></p>
+            <a href="#" class="leer-mas" id="modalEnlace">Leer completo →</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+        <script>
+        // Mapa de enlaces generado automáticamente por generar.py
+        const enlacesArticulos = {
+            'Día 45 J.A.R.V.I.S, Iron Man y el futuro que imaginábamos': 'articulos/dia-45-jarvis-iron-man-y-el-futuro-que-imaginabamos.html',
+    'Día 44 Antes de la IA, estaba el patito de goma': 'articulos/dia-44-antes-de-la-ia-estaba-el-patito-de-goma.html',
+    'Día 43 SQL Injection': 'articulos/dia-43-sql-injection.html',
+    'Día 42 SQL y Python': 'articulos/dia-42-sql-y-python.html',
+    'Día 41 Indices en SQL': 'articulos/dia-41-indices-en-sql.html',
+    'Día 40 Café, pan y tablas que se encuentran': 'articulos/dia-40-cafe-pan-y-tablas-que-se-encuentran.html',
+    'Día 39 Funciones en SQL': 'articulos/dia-39-funciones-en-sql.html',
+    'Día 36 Bases de datos': 'articulos/dia-36-bases-de-datos.html',
+    'Día 24 Conjuntos': 'articulos/dia-24-conjuntos.html',
+    'Día 38 Herramientas de SQL': 'articulos/dia-38-herramientas-de-sql.html',
+    'Generador Codigo QR Version 4': 'articulos/generador-codigo-qr-version-4.html',
+    'Cuando el deseo deja de ser amor': 'articulos/cuando-el-deseo-deja-de-ser-amor.html',
+    'Generador Codigo QR Version 2 y 3': 'articulos/generador-codigo-qr-version-2-y-3.html',
+    'Día 37 Tablas en SQL': 'articulos/dia-37-tablas-en-sql.html',
+    'Generador Codigo QR Version 1': 'articulos/generador-codigo-qr-version-1.html',
+    'Día 35 SQL': 'articulos/dia-35-sql.html',
+    'Día 34 Bye Python, Salve SQL': 'articulos/dia-34-bye-python-salve-sql.html',
+    'Día 33 Mary Poppins': 'articulos/dia-33-mary-poppins.html',
+    'Mix de idiomas': 'articulos/mix-de-idiomas.html',
+    'Día 32 Entradas y Salidas': 'articulos/dia-32-entradas-y-salidas.html',
+    'Aprender sin rigudez': 'articulos/aprender-sin-rigudez.html',
+    'Día 31 Excepciones Personalizadas': 'articulos/dia-31-excepciones-personalizadas.html',
+    'La Biblioteca de Medianoche': 'articulos/la-biblioteca-de-medianoche.html',
+    'Día 30 Organizador Version 3.0': 'articulos/dia-30-organizador-version-30.html',
+    'Ingles y Python': 'articulos/ingles-y-python.html',
+    'Día 29 Excepciones': 'articulos/dia-29-excepciones.html',
+    'Día 28 Abstracción': 'articulos/dia-28-abstraccion.html',
+    'Aprender te cambia': 'articulos/aprender-te-cambia.html',
+    'Día 26 POO': 'articulos/dia-26-poo.html',
+    'Día 25 Organizador Version 2.0': 'articulos/dia-25-organizador-version-20.html',
+    'Día 23 Diccionarios': 'articulos/dia-23-diccionarios.html',
+    'Día 22 Tuplas': 'articulos/dia-22-tuplas.html',
+    'Día 21 Listas': 'articulos/dia-21-listas.html',
+    'Día 20 Organizador de Archivos': 'articulos/dia-20-organizador-de-archivos.html',
+    'Día 19 Bucles': 'articulos/dia-19-bucles.html',
+    'Día 18 Condicionales': 'articulos/dia-18-condicionales.html',
+    'Día 17 Funciones': 'articulos/dia-17-funciones.html',
+    'Día 16 Operadores': 'articulos/dia-16-operadores.html',
+    'Día 15 Variables': 'articulos/dia-15-variables.html',
+    'Día 14 De C a Python': 'articulos/dia-14-de-c-a-python.html'
+        };
+
+        const imagenesArticulos = {
+            'Día 45 J.A.R.V.I.S, Iron Man y el futuro que imaginábamos': 'imagenes/ironman.jpg',
+    'Día 44 Antes de la IA, estaba el patito de goma': 'imagenes/patito-goma.jpg',
+    'Día 43 SQL Injection': 'imagenes/sql-injection.jpg',
+    'Día 42 SQL y Python': 'imagenes/sql-python.jpg',
+    'Día 41 Indices en SQL': 'imagenes/indices.jpg',
+    'Día 40 Café, pan y tablas que se encuentran': 'imagenes/pan-y-cafe.jpg',
+    'Día 39 Funciones en SQL': 'imagenes/libros.jpg',
+    'Día 36 Bases de datos': 'imagenes/libreria.jpg',
+    'Día 24 Conjuntos': 'imagenes/conjuntos.jpg',
+    'Día 38 Herramientas de SQL': 'imagenes/tools.jpg',
+    'Generador Codigo QR Version 4': 'imagenes/generadorV4.png',
+    'Cuando el deseo deja de ser amor': 'imagenes/obsesion.jpg',
+    'Generador Codigo QR Version 2 y 3': 'imagenes/generador-V23.png',
+    'Día 37 Tablas en SQL': 'imagenes/tablas.jpg',
+    'Generador Codigo QR Version 1': 'imagenes/generador-V1.png',
+    'Día 35 SQL': 'imagenes/sql-juegos.jpg',
+    'Día 34 Bye Python, Salve SQL': 'imagenes/camino.jpg',
+    'Día 33 Mary Poppins': 'imagenes/bolsa.jpg',
+    'Mix de idiomas': 'imagenes/italia.jpg',
+    'Día 32 Entradas y Salidas': 'imagenes/entra-sal.jpg',
+    'Aprender sin rigudez': 'imagenes/aprender.jpg',
+    'Día 31 Excepciones Personalizadas': 'imagenes/excepcion.jpg',
+    'La Biblioteca de Medianoche': 'imagenes/medianoche.png',
+    'Día 30 Organizador Version 3.0': 'imagenes/organizadorV3.png',
+    'Ingles y Python': 'imagenes/lenguajes.jpg',
+    'Día 29 Excepciones': 'imagenes/not-found.jpg',
+    'Día 28 Abstracción': 'imagenes/abstraccion.jpg',
+    'Aprender te cambia': 'imagenes/cambia.jpg',
+    'Día 26 POO': 'imagenes/aeropuerto.jpg',
+    'Día 25 Organizador Version 2.0': 'imagenes/organizadorV2.png',
+    'Día 23 Diccionarios': 'imagenes/agenda.jpg',
+    'Día 22 Tuplas': 'imagenes/tuplas.jpg',
+    'Día 21 Listas': 'imagenes/listas.jpg',
+    'Día 20 Organizador de Archivos': 'imagenes/organizadorV1.png',
+    'Día 19 Bucles': 'imagenes/rutina.jpg',
+    'Día 18 Condicionales': 'imagenes/condicional.jpg',
+    'Día 17 Funciones': 'imagenes/funcion.jpg',
+    'Día 16 Operadores': 'imagenes/educar.jpg',
+    'Día 15 Variables': 'imagenes/variables.jpg',
+    'Día 14 De C a Python': 'imagenes/c-python.jpg'
+        };
+
+        const creditosArticulos = {
+            'Día 45 J.A.R.V.I.S, Iron Man y el futuro que imaginábamos': {'nombre': 'Imagen tomada de Unsplash / Jéan Béller', 'enlace': 'https://unsplash.com/es/@worldtravelwithjean'},
+    'Día 44 Antes de la IA, estaba el patito de goma': {'nombre': 'Imagen tomada de Unsplash / Jason Richard', 'enlace': 'https://unsplash.com/es/@jasonthedesigner'},
+    'Día 43 SQL Injection': {'nombre': 'Imagen tomada de Unsplash / Markus Spiske', 'enlace': 'https://unsplash.com/es/@markusspiske'},
+    'Día 42 SQL y Python': {'nombre': 'Imagen tomada de Unsplash / Caspar Camille Rubin', 'enlace': 'https://unsplash.com/es/@casparrubin'},
+    'Día 41 Indices en SQL': {'nombre': 'Imagen tomada de Unsplash / Jozsef Hocza', 'enlace': 'https://unsplash.com/es/@hocza'},
+    'Día 40 Café, pan y tablas que se encuentran': {'nombre': 'Imagen tomada de Unsplash / Camara Negra', 'enlace': 'https://unsplash.com/es/@camaranegra'},
+    'Día 39 Funciones en SQL': {'nombre': 'Imagen tomada de Unsplash / Gülfer ERGİN', 'enlace': 'https://unsplash.com/es/@gulfergin_01'},
+    'Día 36 Bases de datos': {'nombre': 'Imagen tomada de Unsplash / Jonathan Francisca', 'enlace': 'https://unsplash.com/es/@jonathan_francisca'},
+    'Día 24 Conjuntos': {'nombre': 'Imagen tomada de Unsplash / Andrew Moca', 'enlace': 'https://unsplash.com/es/@mocaandrew'},
+    'Día 38 Herramientas de SQL': {'nombre': 'Imagen tomada de Unsplash / Mohammad Rahmani', 'enlace': 'https://unsplash.com/es/@gulfergin_01'},
+    'Generador Codigo QR Version 4': {'nombre': 'Imagen tomada como evidencia del programa realizado', 'enlace': ''},
+    'Cuando el deseo deja de ser amor': {'nombre': 'Imagen tomada de Unsplash / Esther Tuttle', 'enlace': 'https://unsplash.com/es/@entradaphotography'},
+    'Generador Codigo QR Version 2 y 3': {'nombre': 'Imagen tomada como evidencia del programa realizado', 'enlace': ''},
+    'Día 37 Tablas en SQL': {'nombre': 'Imagen tomada de Unsplash / Mikhail Pushkarev', 'enlace': 'https://unsplash.com/es/@dismilated'},
+    'Generador Codigo QR Version 1': {'nombre': 'Imagen tomada como evidencia del programa realizado', 'enlace': ''},
+    'Día 35 SQL': {'nombre': 'Imagen tomada de Unsplash / Michał Bożek', 'enlace': 'https://unsplash.com/es/@bozu'},
+    'Día 34 Bye Python, Salve SQL': {'nombre': 'Imagen tomada de Unsplash / Artur Aldyrkhanov', 'enlace': 'https://unsplash.com/es/@aldyrkhanov'},
+    'Día 33 Mary Poppins': {'nombre': 'Imagen tomada de Unsplash / Guillaume de Germain', 'enlace': 'https://unsplash.com/es/@guillaumedegermain'},
+    'Mix de idiomas': {'nombre': 'Imagen tomada de Unsplash / Ananthan Loggi', 'enlace': 'https://unsplash.com/es/@loggi30'},
+    'Día 32 Entradas y Salidas': {'nombre': 'Imagen tomada de Unsplash / Christina @ wocintechchat.com M', 'enlace': 'https://unsplash.com/es/@wocintechchat'},
+    'Aprender sin rigudez': {'nombre': 'Imagen tomada de Unsplash / Unseen Studio', 'enlace': 'https://unsplash.com/es/@uns__nstudio'},
+    'Día 31 Excepciones Personalizadas': {'nombre': 'Imagen tomada de Unsplash / Vitaly Gariev', 'enlace': 'https://unsplash.com/es/@silverkblack'},
+    'La Biblioteca de Medianoche': {'nombre': 'Imagen tomada del libro La Biblioteca de Medianoche de Matt Haig', 'enlace': ''},
+    'Día 30 Organizador Version 3.0': {'nombre': 'Imagen tomada como evidencia del programa realizado', 'enlace': ''},
+    'Ingles y Python': {'nombre': 'Imagen tomada de Unsplash / Ling App', 'enlace': 'https://unsplash.com/es/@lingapp'},
+    'Día 29 Excepciones': {'nombre': 'Imagen tomada de Unsplash / Erik Mclean', 'enlace': 'https://unsplash.com/es/@introspectivedsgn'},
+    'Día 28 Abstracción': {'nombre': 'Imagen tomada de Unsplash / Rami Al-zayat', 'enlace': 'https://unsplash.com/es/@rami_alzayat'},
+    'Aprender te cambia': {'nombre': 'Imagen tomada de Unsplash / Robynne O', 'enlace': 'https://unsplash.com/es/@roborobs'},
+    'Día 26 POO': {'nombre': 'Imagen tomada de Unsplash / Phil Mosley', 'enlace': 'https://unsplash.com/es/@philm1'},
+    'Día 25 Organizador Version 2.0': {'nombre': 'Imagen tomada como evidencia del programa realizado', 'enlace': ''},
+    'Día 23 Diccionarios': {'nombre': 'Imagen tomada de Unsplash / Brett Jordan', 'enlace': 'https://unsplash.com/es/@brett_jordan'},
+    'Día 22 Tuplas': {'nombre': 'Imagen tomada de Unsplash / Amanz', 'enlace': 'https://unsplash.com/es/@amanz'},
+    'Día 21 Listas': {'nombre': 'Imagen tomada de Unsplash / Glenn Carstens-Peters', 'enlace': 'https://unsplash.com/es/@glenncarstenspeters'},
+    'Día 20 Organizador de Archivos': {'nombre': 'Imagen tomada como evidencia del programa realizado', 'enlace': ''},
+    'Día 19 Bucles': {'nombre': 'Imagen tomada de Unsplash / Nik', 'enlace': 'https://unsplash.com/es/@helloimnik'},
+    'Día 18 Condicionales': {'nombre': 'Imagen tomada de Unsplash / Artturi Jalli', 'enlace': 'https://unsplash.com/es/@artturijalli'},
+    'Día 17 Funciones': {'nombre': 'Imagen tomada de Unsplash / Shahadat Rahman', 'enlace': 'https://unsplash.com/es/@markusspiske'},
+    'Día 16 Operadores': {'nombre': 'Imagen tomada de Unsplash / Annie Spratt', 'enlace': 'https://unsplash.com/es/@anniespratt'},
+    'Día 15 Variables': {'nombre': 'Imagen tomada de Unsplash / Octavian-Dan Craciun', 'enlace': 'https://unsplash.com/es/@octadan'},
+    'Día 14 De C a Python': {'nombre': 'Imagen tomada de Unsplash /  Zach Graves', 'enlace': 'https://unsplash.com/es/@zgraves'}
+        };
+    </script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

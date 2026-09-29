@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 22 Tuplas — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Día 22 Tuplas</h2>
+            <img src="..//imagenes/tuplas.jpg" alt="Día 22 Tuplas" class="articulo-imagen">
+            <p class="credito"><a href="https://unsplash.com/es/@amanz" target="_blank" rel="noopener">Imagen tomada de Unsplash / Amanz</a></p>
+            <div class="fecha">2026-05-07</div>
+            <div class="categorias">#python</div>
+            
+            <p>Cuando estudiamos listas, es inevitable recordar los arrays que vimos anteriormente en C.</p>
+<p>Ambas estructuras nos permiten organizar varios datos en un mismo lugar.</p>
+<p>Sin embargo, al seguir avanzando en Python, aparece otra estructura interesante: las tuplas.</p>
+<hr>
+<p>Una tupla es una colección ordenada de elementos.</p>
+<p>Su principal característica es que es **inmutable**, lo que significa que, una vez creada, no puede modificarse.</p>
+<p>Sus elementos se escriben entre paréntesis y separados por comas.</p>
+<p>Por ejemplo:</p>
+<pre><code>
+punto = (3, 4)print(punto[0])print(punto[1])
+</code></pre>
+<hr>
+<p>Podemos acceder a sus elementos de forma similar a las listas, utilizando índices.</p>
+<p>La diferencia está en que no podemos agregar, eliminar o modificar elementos una vez que la tupla existe.</p>
+<hr>
+<p>Eso puede parecer una limitación.</p>
+<p>Pero en realidad resulta útil cuando trabajamos con datos que no deberían cambiar.</p>
+<p>Por ejemplo:</p>
+<li>coordenadas</li>
+<li>configuraciones</li>
+<li>valores constantes dentro de un programa</li>
+<hr>
+<p>Aunque no pueden modificarse, sí contamos con algunas herramientas para trabajar con ellas:</p>
+<li>`count()` → cuenta cuántas veces aparece un elemento</li>
+<li>`index()` → devuelve la posición de un elemento</li>
+<li>`len()` → indica cuántos elementos contiene</li>
+<hr>
+<p>Creo que las tuplas muestran algo interesante sobre Python.</p>
+<p>No todas las estructuras están pensadas para modificarse.</p>
+<p>Algunas existen precisamente para conservar el orden y la estabilidad de ciertos datos.</p>
+<p>Y después de venir de C, resulta curioso encontrar estructuras que priorizan esa seguridad.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

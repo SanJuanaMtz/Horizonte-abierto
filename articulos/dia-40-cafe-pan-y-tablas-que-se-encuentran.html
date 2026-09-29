@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 40 Café, pan y tablas que se encuentran — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Día 40 Café, pan y tablas que se encuentran</h2>
+            <img src="..//imagenes/pan-y-cafe.jpg" alt="Día 40 Café, pan y tablas que se encuentran" class="articulo-imagen">
+            <p class="credito"><a href="https://unsplash.com/es/@camaranegra" target="_blank" rel="noopener">Imagen tomada de Unsplash / Camara Negra</a></p>
+            <div class="fecha">2026-08-17</div>
+            <div class="categorias">#sql</div>
+            
+            <p>Cuando los días son tan frescos que el mismo aire se siente agradable en el rostro, no puedo dejar de pensar en lo delicioso que huele el café.</p>
+<p>Y casi inmediatamente aparece otra cosa en mi mente: el pan.</p>
+<p>En México tenemos una relación bastante especial con el café y el pan. Es una combinación sencilla, pero perfecta para acompañar una mañana tranquila.</p>
+<p>Y quizá sea precisamente eso lo que me hizo pensar en SQL.</p>
+<p>Las combinaciones pueden mejorar aquello que ya tenemos.</p>
+<p>Un café es bueno.</p>
+<p>Un pan es bueno.</p>
+<p>Pero juntos pueden convertirse en algo mucho mejor.</p>
+<p>En SQL ocurre algo parecido cuando necesitamos trabajar con información que se encuentra distribuida en diferentes tablas.</p>
+<p>Ahí aparecen los `JOIN`.</p>
+<h2>Cuando dos tablas se encuentran</h2>
+<p>Recordemos que las bases de datos relacionales suelen dividir la información en diferentes tablas.</p>
+<p>Esto nos permite mantener nuestros datos organizados, pero también significa que, en determinadas ocasiones, necesitaremos consultar información que se encuentra en más de una tabla.</p>
+<p>Los `JOIN` nos permiten precisamente eso: **combinar registros relacionados de dos o más tablas utilizando una condición en común.**</p>
+<p>Generalmente esta relación se establece mediante identificadores o llaves.</p>
+<p>Por ejemplo, imaginemos que tenemos una tabla llamada `shows` y otra llamada `genres`.</p>
+<p>Podríamos relacionarlas mediante un identificador:</p>
+<pre><code>
+SELECT *
+FROM shows
+JOIN genres
+ON shows.id = genres.show_id
+WHERE shows.id = 63881;
+</code></pre>
+<p>Aquí estamos indicando que queremos unir ambas tablas cuando el `id` del programa coincida con el `show_id` registrado en la tabla de géneros.</p>
+<p>Después filtramos el resultado para obtener únicamente la información correspondiente al programa cuyo identificador es `63881`.</p>
+<p>De esta manera podemos consultar información que originalmente se encontraba separada.</p>
+<h2>Combinar para encontrar relaciones</h2>
+<p>Lo interesante de los `JOIN` es que no necesitamos guardar toda la información en una sola tabla.</p>
+<p>Podemos mantener diferentes conjuntos de datos organizados y después relacionarlos cuando necesitemos consultarlos.</p>
+<p>Es como tener diferentes piezas de información que, por separado, tienen sentido, pero que al encontrarse nos permiten obtener una imagen mucho más completa.</p>
+<p>Y quizá por eso me gusta tanto esta parte de SQL.</p>
+<p>Primero aprendemos a guardar los datos.</p>
+<p>Después aprendemos a buscarlos.</p>
+<p>Y ahora estamos aprendiendo a **relacionarlos**.</p>
+<p>Un poco como el café y el pan.</p>
+<p>Cada uno puede disfrutarse por separado, pero juntos tienen algo especial.</p>
+<p>Aunque, siendo honesta, probablemente esta analogía nació porque todavía no había desayunado. 😂</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>

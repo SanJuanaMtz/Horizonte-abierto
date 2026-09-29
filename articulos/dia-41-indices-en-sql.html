@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 41 Indices en SQL — Horizonte Abierto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../imagenes/icono.png">
+    </head>
+    <body>
+
+    <header>
+        <h1>Horizonte<span>abierto</span></h1>
+        <p>// bitácora de aprendizaje, lenguajes y viajes</p>
+        <a href="../index.html" class="volver">← Volver al inicio</a>
+    </header>
+
+    <main class="articulo">
+        <article>
+            <h2>Día 41 Indices en SQL</h2>
+            <img src="..//imagenes/indices.jpg" alt="Día 41 Indices en SQL" class="articulo-imagen">
+            <p class="credito"><a href="https://unsplash.com/es/@hocza" target="_blank" rel="noopener">Imagen tomada de Unsplash / Jozsef Hocza</a></p>
+            <div class="fecha">2026-08-21</div>
+            <div class="categorias">#sql</div>
+            
+            <h2>Los caminos que elegimos para encontrar algo</h2>
+<p>Hace unos días estuve corriendo mientras admiraba el paisaje en cada momento.</p>
+<p>Correr se ha convertido en una de mis actividades favoritas, especialmente porque lo utilizo para mejorar mi condición en el agua.</p>
+<p>Aunque, siendo honesta, al principio también tenía otra razón.</p>
+<p>Uno de los libros que he leído recomendaba dar ciertos paseos para mantener la fuente de inspiración llena.</p>
+<p>Pero de eso hablaremos después.</p>
+<p>Mientras admiraba el paisaje y me internaba por un camino rodeado de árboles, recordé mi propio camino documentando el regreso a mi carrera con una intención más consciente.</p>
+<p>Aunque, siendo completamente honesta, lo que terminé recordando fueron las estructuras de datos.</p>
+<p>Más específicamente, los árboles.</p>
+<p>Aquellas estructuras en las que tenemos nodos relacionados entre sí, donde un nodo puede funcionar como padre de otros nodos hijos y cuya organización nos permite realizar determinadas búsquedas de manera mucho más eficiente.</p>
+<p>Y entonces me llevé una pequeña sorpresa cuando llegué a los **índices en SQL**.</p>
+<p>No recuerdo haber estudiado los índices durante mi carrera, aunque mis recuerdos de aquella época ya están un poco difusos.</p>
+<p>Sin embargo, al encontrarlos ahora, la relación con los árboles que estudié en C me resultó bastante familiar.</p>
+<hr>
+<h3>Los índices en SQL</h3>
+<p>Un índice nos permite optimizar determinadas consultas sobre una tabla.</p>
+<p>Por ejemplo, podemos crear un índice para la columna `title` de la tabla `shows` utilizando:</p>
+<pre><code>
+CREATE INDEX title_index ON shows (title);
+</code></pre>
+<p>Con esto le indicamos a SQLite que cree un índice asociado a esa columna para facilitar determinadas búsquedas.</p>
+<p>Internamente, SQLite puede utilizar estructuras de datos especializadas para organizar esta información, como los **B-trees**.</p>
+<p>Aunque pueden recordarnos a los árboles binarios que hemos visto anteriormente, los B-trees tienen una diferencia importante: un nodo puede tener más de dos hijos.</p>
+<p>Esto permite almacenar y buscar grandes cantidades de información de manera eficiente.</p>
+<h3>La optimización también tiene un costo</h3>
+<p>Sin embargo, crear índices para todo no significa que nuestras consultas serán automáticamente mejores.</p>
+<p>Cada índice necesita espacio adicional para almacenarse y también debe mantenerse actualizado cuando agregamos, modificamos o eliminamos información de la tabla.</p>
+<p>Es decir, tenemos una especie de intercambio:</p>
+<p>**más velocidad de búsqueda a cambio de más espacio y trabajo adicional para mantener el índice.**</p>
+<p>Por eso no tendría demasiado sentido indexar absolutamente todas las columnas.</p>
+<p>Necesitamos pensar qué información consultamos con mayor frecuencia y dónde realmente vale la pena utilizar un índice.</p>
+<h3>Encontrar el camino correcto</h3>
+<p>Y quizá por eso me gustó encontrarme con este concepto mientras sigo corriendo.</p>
+<p>Cuando vemos un camino rodeado de árboles, podemos simplemente recorrerlo.</p>
+<p>Pero si queremos llegar más rápido a un lugar determinado, necesitamos encontrar una mejor manera de orientarnos.</p>
+<p>Los índices hacen algo parecido con los datos.</p>
+<p>No cambian la información que tenemos.</p>
+<p>Simplemente nos ayudan a encontrarla de una manera más eficiente.</p>
+        </article>
+    </main>
+
+    <button id="btn-arriba" class="boton-arriba" aria-label="Volver arriba">↑</button>
+
+    <footer>
+        <p>© 2026 SanJuana Martínez Salazar — Horizonte Abierto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../js/articulos.js"></script>
+    </body>
+    </html>
